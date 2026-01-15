@@ -1,0 +1,23 @@
+baseURL: 'https://www.seekpower.top/'
+languageCode: 'zh-cn'
+title: '年轻人，你渴望力量吗'
+theme: 'textbook'
+
+
+# 主导航菜单项
+menu:
+  main:
+    - identifier: home
+      name: 首页
+      url: /
+      weight: 10
+    - identifier: about-site
+      name: 关于本站
+      url: /about-site/
+      weight: 20
+    - identifier: about-me
+      name: 关于我
+      url: /about-me/
+      weight: 30
+
+disableKinds: ["taxonomy", "term"]

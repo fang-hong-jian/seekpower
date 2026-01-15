@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>首页 on 年轻人，你渴望力量吗</title>
+    <link>https://www.seekpower.top/</link>
+    <description>Recent content in 首页 on 年轻人，你渴望力量吗</description>
     <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 15 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.seekpower.top/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>关于我</title>
+      <link>https://www.seekpower.top/about-me/</link>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.seekpower.top/about-me/</guid>
+      <description>&lt;p&gt;资质愚钝的大龄散修，兴趣使然的学生。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>关于本站</title>
+      <link>https://www.seekpower.top/about-site/</link>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.seekpower.top/about-site/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

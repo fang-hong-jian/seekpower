@@ -1,0 +1,12 @@
+{{ define "title" }}
+    {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+    <h1>欢迎来到 {{ .Site.Title }}</h1>
+    <p>这是一个使用 Hugo 和自定义 “textbook” 主题构建的网站。</p>
+    <p>网站标题来源于配置：<strong>{{ .Site.Title }}</strong></p>
+    <hr>
+    <!-- .Content 会渲染 content/_index.md 文件中的Markdown内容 -->
+    {{ .Content }}
+{{ end }}
