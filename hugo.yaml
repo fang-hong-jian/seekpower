@@ -7,17 +7,38 @@ theme: 'textbook'
 # 主导航菜单项
 menu:
   main:
+    - identifier: author
+      name: 方鸿渐
+      url: /
+      weight: 1
+      params:
+        icon: "/icons/logo.png"
     - identifier: home
       name: 首页
       url: /
       weight: 10
+      params:
+        icon: "/icons/home.png"
     - identifier: about-site
       name: 关于本站
       url: /about-site/
       weight: 20
+      params:
+        icon: "/icons/site.png"
     - identifier: about-me
       name: 关于我
       url: /about-me/
       weight: 30
+      params:
+        icon: "/icons/me.png"
+  second:
+    - identifier: login
+      name: 登录
+      url: /login/
+      weight: 50
 
 disableKinds: ["taxonomy", "term"]
+hasCJKLanguage: true
+
+# 所有链接转换为绝对链接
+canonifyURLs: true

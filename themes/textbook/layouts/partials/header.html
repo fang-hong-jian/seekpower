@@ -1,18 +1,35 @@
-<header>
-    <div class="site-branding">
-        <!-- 点击站点标题可以返回首页 -->
-        <h1><a href="{{ .Site.BaseURL | relURL }}">{{ .Site.Title }}</a></h1>
-    </div>
-    <nav aria-label="主导航">
-        <ul>
-            <!-- 循环遍历在 hugo.yaml 中定义的 “main” 菜单 -->
-            {{ range .Site.Menus.main }}
-                <li>
-                    <a href="{{ .URL }}" {{ if eq $.RelPermalink .URL }}aria-current="page"{{ end }}>
-                        {{ .Name }}
-                    </a>
-                </li>
-            {{ end }}
-        </ul>
+<header class="site-header">
+    <nav class="left_header" aria-label="主导航">
+        <!-- 循环遍历在 hugo.yaml 中定义的 “main” 菜单 -->
+        {{ range site.Menus.main }}
+        {{/* 判断是不是作者名 */}}
+        {{if eq .Identifier "author"}}
+        <div class="author-div">
+            <img src="{{ .Params.icon}}" id="logo" />
+            <a href="{{ .URL}}" id="{{.KeyName}}">
+                {{ .Name }}
+            </a>
+        </div>
+        {{else}}
+
+        <div class="menus-left-div">
+            <img src="{{ .Params.icon}}" class="menus-left-icons"/>
+            <a href="{{ .URL}}" id="{{.KeyName}}">
+                {{ .Name }}
+            </a>
+        </div>
+
+        {{end}}
+
+        {{ end }}
+    </nav>
+
+    <nav class="right_header" aria-label="副导航">
+        <!-- 循环遍历在 hugo.yaml 中定义的 “second” 菜单 -->
+        {{ range site.Menus.second }}
+        <a href="{{ .URL}}" id="{{.KeyName}}" class="home_menus">
+            {{ .Name }}
+        </a>
+        {{ end }}
     </nav>
 </header>
