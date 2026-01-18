@@ -23,7 +23,6 @@ body {
     color: var(--color-text);
     background-color: var(--color-bg);
     margin: 0;
-    padding: 20px;
 }
 
 header nav a {
@@ -34,13 +33,14 @@ header nav a {
 .site-header {
     position: fixed;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     top: 0;
     left: 0;
     width: 100%;
     background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
     /* 阴影效果 */
     transition: box-shadow 0.3s ease;
     /* 添加过渡效果使变化更平滑 */
@@ -88,14 +88,12 @@ header nav a {
     margin: 5px;
     padding-left: 8px;
     padding-right: 8px;
-    padding-top: 2px;
-    padding-bottom: 2px;
     font-weight: 600;
 }
 
 /* 左侧菜单图标 */
 .menus-left-icons {
-    height: 26px;
+    height: 20px;
 }
 
 .right_header {
@@ -109,7 +107,7 @@ article {
     max-width: var(--width-content);
     margin: 0 auto;
     /* 居中 */
-    padding: 20px;
+    padding: 120px;
 }
 
 /* 7. 响应式：在手机上调整 */
