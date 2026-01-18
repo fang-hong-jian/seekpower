@@ -1,11 +1,13 @@
 <header class="site-header">
-    <nav class="left_header" aria-label="主导航">
+    <nav class="left-header" aria-label="主导航">
         <!-- 循环遍历在 hugo.yaml 中定义的 “main” 菜单 -->
         {{ range site.Menus.main }}
         {{/* 判断是不是作者名 */}}
         {{if eq .Identifier "author"}}
         <div class="author-div">
-            <img src="{{ .Params.icon}}" id="logo" />
+            <a href="{{ .URL}}">
+                <img src="{{ .Params.icon}}" id="logo" />
+            </a>
             <a href="{{ .URL}}" id="{{.KeyName}}">
                 {{ .Name }}
             </a>
@@ -13,7 +15,9 @@
         {{else}}
 
         <div class="menus-left-div">
-            <img src="{{ .Params.icon}}" class="menus-left-icons"/>
+            <a href="{{ .URL}}">
+                <img src="{{ .Params.icon}}" class="menus-left-icons" />
+            </a>
             <a href="{{ .URL}}" id="{{.KeyName}}">
                 {{ .Name }}
             </a>

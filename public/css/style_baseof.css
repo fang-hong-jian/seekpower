@@ -50,7 +50,7 @@ header nav a {
     font-weight: 500;
 }
 
-.left_header {
+.left-header {
     display: inline-flex;
     align-items: center;
 }
@@ -90,9 +90,11 @@ header nav a {
     padding-right: 8px;
     padding-top: 2px;
     padding-bottom: 2px;
+    font-weight: 600;
 }
+
 /* 左侧菜单图标 */
-.menus-left-icons{
+.menus-left-icons {
     height: 26px;
 }
 
