@@ -16,7 +16,7 @@
 body {
     font-family: var(--font-sans);
     font-weight: 500;
-    font-size: 14px;
+    font-size: 15px;
     /* 基础字号 */
     line-height: 1.7;
     /* 行高 */
@@ -47,7 +47,6 @@ header nav a {
     z-index: 1000;
     /* 确保在最上层 */
     font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
-    font-weight: 500;
 }
 
 .left-header {
@@ -96,29 +95,38 @@ header nav a {
     height: 20px;
 }
 
+/* 右侧导航 */
 .right_header {
     display: inline-flex;
     align-items: center;
+    padding-right: 10px;
 }
 
-/* 2. 内容容器与呼吸感 */
-main,
-article {
-    max-width: var(--width-content);
-    margin: 0 auto;
-    /* 居中 */
-    padding: 120px;
+.home-menus-right {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: 600;
+}
+
+/* 主页大标题和图片 */
+.home-context {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 100px;
+    padding-bottom: 10px;
 }
 
 /* 7. 响应式：在手机上调整 */
 @media (max-width: 768px) {
     body {
-        font-size: 16px;
-        padding: 10px;
+        font-size: 15px;
     }
 
     main,
     article {
-        padding: 10px;
+        font-size: 15px;
     }
 }

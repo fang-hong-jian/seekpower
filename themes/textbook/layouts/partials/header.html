@@ -4,6 +4,8 @@
         {{ range site.Menus.main }}
         {{/* 判断是不是作者名 */}}
         {{if eq .Identifier "author"}}
+
+        {{/* 作者名和logo用横盒子 */}}
         <div class="author-div">
             <a href="{{ .URL}}">
                 <img src="{{ .Params.icon}}" id="logo" />
@@ -13,12 +15,12 @@
             </a>
         </div>
         {{else}}
-
+        {{/* 左侧每个菜单项用纵盒子，上面是图标 */}}
         <div class="menus-left-div">
             <a href="{{ .URL}}">
                 <img src="{{ .Params.icon}}" class="menus-left-icons" />
             </a>
-            <a href="{{ .URL}}" id="{{.KeyName}}">
+            <a href="{{ .URL}}" class="home-menus-left" id="{{.KeyName}}">
                 {{ .Name }}
             </a>
         </div>
@@ -27,11 +29,11 @@
 
         {{ end }}
     </nav>
-
+    {{/* 右侧导航目前只有文字 */}}
     <nav class="right_header" aria-label="副导航">
         <!-- 循环遍历在 hugo.yaml 中定义的 “second” 菜单 -->
         {{ range site.Menus.second }}
-        <a href="{{ .URL}}" id="{{.KeyName}}" class="home_menus">
+        <a href="{{ .URL}}" id="{{.KeyName}}" class="home-menus-right">
             {{ .Name }}
         </a>
         {{ end }}

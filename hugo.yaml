@@ -1,8 +1,7 @@
-baseURL: 'https://www.seekpower.top/'
-languageCode: 'zh-cn'
-title: '年轻人，你渴望力量吗'
-theme: 'textbook'
-
+baseURL: "https://www.seekpower.top/"
+languageCode: "zh-cn"
+title: "年轻人，你渴望力量吗"
+theme: "textbook"
 
 # 主导航菜单项
 menu:
@@ -32,10 +31,14 @@ menu:
       params:
         icon: "/icons/me.png"
   second:
+    - identifier: comment
+      name: 留言
+      url: /message/
+      weight: 90
     - identifier: login
       name: 登录
       url: /login/
-      weight: 50
+      weight: 100
 
 disableKinds: ["taxonomy", "term"]
 hasCJKLanguage: true
