@@ -113,10 +113,24 @@ header nav a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 100px;
     padding-bottom: 10px;
+}
+
+.home-left{
+    min-width: 300px;
+}
+
+.home-right{
+    display: inline-flex;
+    align-items: center;
+    max-width: 600px;
+}
+#home-right{
+    max-width: 100%;
 }
 
 /* 7. 响应式：在手机上调整 */
