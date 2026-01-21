@@ -112,26 +112,40 @@ header nav a {
 .home-context {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 150px;
+    padding-right: 150px;
     padding-top: 100px;
     padding-bottom: 10px;
 }
 
-.home-left{
-    min-width: 300px;
+.home-left {
+    display: flex;
+    width: 600px;
+    flex: 1, 1, 600px;
 }
 
-.home-right{
+#young {
+    font-size: 40px;
+}
+
+.home-right {
     display: inline-flex;
     align-items: center;
-    max-width: 600px;
+    width: 800px;
+    flex: 1, 1, 500px;
 }
-#home-right{
+
+#home-right {
     max-width: 100%;
 }
+
+
+
+/* main,main *{
+    border-style: dashed;
+} */
 
 /* 7. 响应式：在手机上调整 */
 @media (max-width: 768px) {
