@@ -3,8 +3,8 @@ languageCode: "zh-cn"
 title: "年轻人，你渴望力量吗"
 theme: "textbook"
 
-# 主导航菜单项
 menu:
+  #主导航
   main:
     - identifier: author
       name: 方鸿渐
@@ -30,18 +30,22 @@ menu:
       weight: 30
       params:
         icon: "/icons/me.png"
+  # 副导航
   second:
     - identifier: comment
       name: 留言
       url: /message/
-      weight: 90
+      weight: 10
     - identifier: login
       name: 登录
       url: /login/
-      weight: 100
+      weight: 20
 
 disableKinds: ["taxonomy", "term"]
 hasCJKLanguage: true
 
 # 所有链接转换为绝对链接
 canonifyURLs: true
+
+# 使markdown可以内嵌html
+unsafe: true

@@ -120,20 +120,17 @@ header nav a {
     padding-bottom: 10px;
 }
 
-.home-left {
+.young {
     display: flex;
     width: 600px;
     flex: 1, 1, 600px;
-}
-
-#young {
     font-size: 40px;
 }
 
 .home-right {
     display: inline-flex;
     align-items: center;
-    width: 800px;
+    max-width: 800px;
     flex: 1, 1, 500px;
 }
 
@@ -141,7 +138,12 @@ header nav a {
     max-width: 100%;
 }
 
-
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+}
 
 /* main,main *{
     border-style: dashed;
