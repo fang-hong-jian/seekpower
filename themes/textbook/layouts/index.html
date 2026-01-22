@@ -4,13 +4,22 @@
 
 {{ define "main" }}
 <div class="home-context">
-        <h1 class="young">年轻人,<br />
-            你渴望力量吗?
-        </h1>
-    <div class="home-right">
-        <img src="/icons/home-right.png" id="home-right" alt="测试">
-    </div>
+    <h1 class="young">年轻人,<br />
+        你渴望力量吗?
+    </h1>
+
+    <img src="/icons/home-right.png" class="home-right">
+
 </div>
+<br />
+<div>
+    {{range site.Menus.math}}
+
+    {{.Name}}
+
+    {{end}}
+</div>
+
 <!-- .Content 会渲染 content/_index.md 文件中的Markdown内容 -->
 {{ .Content }}
 {{ end }}

@@ -121,28 +121,14 @@ header nav a {
 }
 
 .young {
-    display: flex;
     width: 600px;
-    flex: 1, 1, 600px;
+    flex: 1, 1, 500px;
     font-size: 40px;
 }
 
 .home-right {
-    display: inline-flex;
-    align-items: center;
-    max-width: 800px;
+    width: 800px;
     flex: 1, 1, 500px;
-}
-
-#home-right {
-    max-width: 100%;
-}
-
-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 500px;
 }
 
 /* main,main *{

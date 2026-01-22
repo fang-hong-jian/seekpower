@@ -1,6 +1,6 @@
 baseURL: "https://www.seekpower.top/"
 languageCode: "zh-cn"
-title: "年轻人，你渴望力量吗"
+title: "年轻人，你渴望力量吗？"
 theme: "textbook"
 
 menu:
@@ -40,6 +40,29 @@ menu:
       name: 登录
       url: /login/
       weight: 20
+
+  # 数学书导航
+  math:
+    - identifier: philosophy-of-mathematics
+      name: 数学及数学哲学的历史
+      url: /philosophy-of-mathematics/
+      weight: 10
+      params:
+        icon: "/icons/philosophy-of-mathematics.png"
+    - identifier: mathematical-logic
+      name: 数理逻辑基础
+      url: /mathematical-logic/
+      weight: 20
+      params:
+        icon: "/icons/mathematical-logic.png"
+
+  computer:
+    - identifier: html-tutorial
+      name: html教程
+      url: /html-tutorial/
+      weight: 10
+      params:
+        icon: "/icons/html-tutorial.png"
 
 disableKinds: ["taxonomy", "term"]
 hasCJKLanguage: true
