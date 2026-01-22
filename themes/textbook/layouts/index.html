@@ -11,8 +11,18 @@
     <img src="/icons/home-right.png" class="home-right">
 
 </div>
-<br />
-<div>
+<div class="books">
+    <div class="booktypes">
+        <p class="mathbooks">
+            <img src="/icons/mathbooks.png"> <span>数学</span>
+        </p>
+
+        <p class="computerbooks">
+            <img src="/icons/computerbooks.png"> <span>计算机</span>
+        </p>
+    </div>
+
+
     {{range site.Menus.math}}
 
     {{.Name}}
@@ -21,5 +31,7 @@
 </div>
 
 <!-- .Content 会渲染 content/_index.md 文件中的Markdown内容 -->
+
 {{ .Content }}
+
 {{ end }}

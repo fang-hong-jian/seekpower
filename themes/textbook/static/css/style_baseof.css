@@ -49,8 +49,9 @@ header nav a {
     font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
 }
 
+/* 主导航栏 */
 .left-header {
-    display: inline-flex;
+    display: flex;
     align-items: center;
 }
 
@@ -59,13 +60,13 @@ header nav a {
     display: flex;
     flex-direction: row;
     align-items: center;
+    height: 38px;
     padding-left: 30px;
     padding-right: 10px;
-    padding-bottom: 5px;
-    padding-top: 5px;
+    padding-bottom: 6px;
+    padding-top: 6px;
 }
 
-/* 头像框 */
 #logo {
     height: 38px;
     border-style: double;
@@ -83,6 +84,7 @@ header nav a {
 .menus-left-div {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin: 5px;
     padding-left: 8px;
@@ -93,6 +95,11 @@ header nav a {
 /* 左侧菜单图标 */
 .menus-left-icons {
     height: 20px;
+}
+
+.home-menus-left {
+    font-size: 15px;
+    margin: 0px;
 }
 
 /* 右侧导航 */
@@ -118,20 +125,80 @@ header nav a {
     padding-right: 150px;
     padding-top: 100px;
     padding-bottom: 10px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(227, 223, 212);
+    /* border-bottom-color: rgba(85, 162, 160, 0.15); */
 }
 
+
+/* 主页标题字 */
 .young {
     width: 600px;
     flex: 1, 1, 500px;
     font-size: 40px;
 }
 
+/* 主页大图 */
 .home-right {
     width: 800px;
     flex: 1, 1, 500px;
 }
 
+/* 下方导航栏 */
+.books {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* background-color: rgb(250, 248, 242); */
+    min-height: 500px;
+}
+
+/* 科目栏 */
+.booktypes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: rgb(227, 223, 212);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(227, 223, 212);
+}
+
+.mathbooks,
+.computerbooks {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding-left: 30px;
+}
+
+.mathbooks img {
+    height: 100%;
+}
+
+.computerbooks img {
+    height: 75%;
+    padding-right: 10px;
+}
+
+
+/* header, header *{
+    border-style: dashed;
+} */
+
 /* main,main *{
+    border-style: dashed;
+} */
+
+/* :hover{
     border-style: dashed;
 } */
 

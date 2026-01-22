@@ -6,24 +6,20 @@
         {{if eq .Identifier "author"}}
 
         {{/* 作者名和logo用横盒子 */}}
-        <div class="author-div">
-            <a href="{{ .URL}}">
+            <a href="{{ .URL}}" class="logo author-div">
                 <img src="{{ .Params.icon}}" id="logo" />
+                <p id="{{.KeyName}}">
+                    {{ .Name }}
+                </p>
             </a>
-            <a href="{{ .URL}}" id="{{.KeyName}}">
-                {{ .Name }}
-            </a>
-        </div>
         {{else}}
         {{/* 左侧每个菜单项用纵盒子，上面是图标 */}}
-        <div class="menus-left-div">
-            <a href="{{ .URL}}">
+            <a href="{{ .URL}}" class="menus-left-div">
                 <img src="{{ .Params.icon}}" class="menus-left-icons" />
+                <p class="home-menus-left">
+                    {{ .Name }}
+                </p>
             </a>
-            <a href="{{ .URL}}" class="home-menus-left" id="{{.KeyName}}">
-                {{ .Name }}
-            </a>
-        </div>
 
         {{end}}
 
