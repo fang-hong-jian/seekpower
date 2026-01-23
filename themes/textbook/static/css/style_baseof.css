@@ -191,6 +191,13 @@ header nav a {
     font-family: var(--font-sans);
     font-size: 24px;
     font-weight: 600;
+    margin: 5px;
+}
+
+/* 当前展示的学科 */
+.subjects.active {
+    background-color: rgb(235, 233, 229);
+    border-radius: 8px;
 }
 
 /* 添加自定义聚焦样式 */
@@ -207,22 +214,26 @@ header nav a {
 }
 
 /* 激活时 */
-.subjects:active{
+.subjects:active {
     transform: scale(0.98);
 }
 
-.mathbooks img,.other img {
+.subjects img {
     height: 100%;
     padding-right: 6px;
 }
 
-.computerbooks img {
-    height: 80%;
+#math img {
+    height: 90%;
     padding-right: 10px;
 }
 
 /* 陈列栏 */
 .books {
+    display: none;
+}
+
+.books.active {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -230,6 +241,8 @@ header nav a {
     align-items: center;
     padding-left: 40px;
 }
+
+
 
 .book {
     color: inherit;
@@ -245,6 +258,11 @@ header nav a {
     padding-right: 10px;
 }
 
+.book:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+}
+
 .bookname {
     font-size: 18px;
     font-weight: 600;
@@ -254,13 +272,29 @@ header nav a {
 .finish {
     display: inline-block;
     padding: 4px 8px;
-    margin: 4px 8px 4px 0;
+    margin: 4px 8px 4px 8px;
     background-color: #f2f2f2;
     color: #333;
     border-radius: 5px;
     font-size: 14px;
     text-decoration: none;
     transition: all 0.3s ease;
+}
+
+
+
+
+
+
+
+/* 以下是单文章模板位置 */
+
+.single-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    border-style: dashed;
 }
 
 /* header, header *{
