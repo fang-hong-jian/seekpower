@@ -11,23 +11,33 @@
     <img src="/icons/home-right.png" class="home-right">
 
 </div>
-<div class="books">
+<div class="allbooks">
     <div class="booktypes">
-        <p class="mathbooks">
+        <button class="subjects mathbooks">
             <img src="/icons/mathbooks.png"> <span>数学</span>
-        </p>
+        </button>
 
-        <p class="computerbooks">
+        <button class="subjects computerbooks">
             <img src="/icons/computerbooks.png"> <span>计算机</span>
-        </p>
+        </button>
+
+        <button class="subjects other">
+            <img src="/icons/computerbooks.png"> <span>其他</span>
+        </button>
     </div>
 
-
-    {{range site.Menus.math}}
-
-    {{.Name}}
-
-    {{end}}
+    <div class="books">
+        {{range site.Menus.math}}
+        <a href="{{ .URL}}" class="book">
+            <p>
+                <span class="bookname">{{.Name}}</span><span class="finish">{{ .Params.finish}}</span>
+            </p>
+            <p>
+                {{ .Params.describe}}
+            </p>
+        </a>
+        {{end}}
+    </div>
 </div>
 
 <!-- .Content 会渲染 content/_index.md 文件中的Markdown内容 -->
