@@ -3,18 +3,17 @@
 {{ end }}
 
 {{ define "main" }}
-<article class="single-page">
+{{/*  文档元数据  */}}
+<section class="single-page">
     <header>
         <h1>{{ .Title }}</h1>
         {{ if .Date }}
         <time datetime="{{ .Date.Format " 2006-01-02" }}">{{ .Date.Format "2006年1月2日" }}</time>
         {{ end }}
     </header>
-
-    <br />
-    <hr>
+    {{/*  md文件内容  */}}
     <div class="content">
         {{ .Content }}
     </div>
-</article>
+</section>
 {{ end }}

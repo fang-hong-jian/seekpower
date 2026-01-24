@@ -49,7 +49,7 @@ menu:
       weight: 10
       params:
         icon: "/icons/philosophy-of-mathematics.png"
-        finish: 未完结
+        finish: 空
         describe: 伪文本伪文本伪文本伪文本伪文本伪文本伪文本伪文本
     - identifier: mathematical-logic
       name: 数理逻辑基础
@@ -57,7 +57,7 @@ menu:
       weight: 20
       params:
         icon: "/icons/mathematical-logic.png"
-        finish: 未完结
+        finish: 空
         describe: 伪文本伪文本伪文本伪文本伪文本伪文本伪文本伪文本
     - identifier: set-theory
       name: 集合论
@@ -65,7 +65,7 @@ menu:
       weight: 30
       params:
         icon: "/icons/set-theory.png"
-        finish: 未完结
+        finish: 空
         describe: 伪文本伪文本伪文本伪文本伪文本伪文本伪文本伪文本
     - identifier: proof-theory
       name: 证明论
@@ -73,7 +73,7 @@ menu:
       weight: 40
       params:
         icon: "/icons/proof-theory.png"
-        finish: 未完结
+        finish: 空
         describe: 伪文本伪文本伪文本伪文本伪文本伪文本伪文本伪文本
 
   computer:
@@ -83,7 +83,7 @@ menu:
       weight: 10
       params:
         icon: "/icons/html-tutorial.png"
-        finish: 未完结
+        finish: 空
         describe: 伪文本伪文本伪文本伪文本伪文本伪文本伪文本伪文本
     - identifier: css-tutorial
       name: css教程
@@ -91,7 +91,7 @@ menu:
       weight: 20
       params:
         icon: "/icons/css-tutorial.png"
-        finish: 未完结
+        finish: 空
         describe: 伪文本伪文本伪文本伪文本伪文本伪文本伪文本伪文本
     - identifier: javascript-tutorial
       name: javascript教程
@@ -99,7 +99,7 @@ menu:
       weight: 30
       params:
         icon: "/icons/javascript-tutorial.png"
-        finish: 未完结
+        finish: 空
         describe: 伪文本伪文本伪文本伪文本伪文本伪文本伪文本伪文本
 
 
