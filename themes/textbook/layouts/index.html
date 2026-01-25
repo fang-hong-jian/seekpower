@@ -30,35 +30,43 @@
     {{/* 书栏 */}}
     <div class="books active" id="mathbooks">
         {{range site.Menus.math}}
+        {{/* 用$menuItem表示每本书的对象 */}}
+        {{ $menuItem := . }}
+
+        {{/* 获取书的主页，使用 identifier 作为路径 */}}
+        {{ $bookPage := site.GetPage $menuItem.Identifier }}
         <a href="{{ .URL}}" class="book">
-            <p>
-                <span class="bookname">{{.Name}}</span><span class="finish">{{ .Params.finish}}</span>
-            </p>
-            <p>
-                {{ .Params.describe}}
-            </p>
+            
         </a>
         {{end}}
     </div>
     <div class="books" id="computerbooks">
+
         {{range site.Menus.computer}}
+        {{/* 用$menuItem表示每本书的对象 */}}
+        {{ $menuItem := . }}
+        {{/* 获取书的主页，使用 identifier 作为路径 */}}
+        {{ $bookPage := site.GetPage $menuItem.Identifier }}
         <a href="{{ .URL}}" class="book">
-            <p>
-                <span class="bookname">{{.Name}}</span><span class="finish">{{ .Params.finish}}</span>
+            <p class="bookname">
+                {{$bookPage.Title}}
             </p>
-            <p>
-                {{ .Params.describe}}
+            <p class="book-describe">
+                {{ $bookPage.Params.describe}}
             </p>
+            <div class="book-meta">
+                <p>共{{ len $bookPage.Params.chapters}}章</p>
+                <p class="finish">{{ $bookPage.Params.finish}}</p>
+            </div>
         </a>
         {{end}}
     </div>
 
     <div class="books" id="otherbooks">
-        
+
     </div>
 
 </div>
-
 <!-- .Content 会渲染 content/_index.md 文件中的Markdown内容 -->
 
 {{ .Content }}

@@ -1,0 +1,23 @@
+{{ define "title" }}
+{{ .Title }}
+{{ end }}
+
+{{ define "main" }}
+{{/* 文档元数据 */}}
+<div>
+    {{/* article.chapter-content */}}
+    <article class="chapter-content">
+        <header>
+            <h1> <a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+            {{ if .Date }}
+            <time datetime="{{ .Date.Format " 2006-01-02" }}">{{ .Date.Format "2006年1月2日" }}</time>
+            {{ end }}
+        </header>
+        {{/* md文件内容 */}}
+        <div class="content">
+            {{ .Content }}
+        </div>
+    </article>
+</div>
+
+{{ end }}

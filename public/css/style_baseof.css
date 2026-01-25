@@ -69,7 +69,6 @@ header nav a {
 }
 
 
-
 #logo {
     height: 35px;
     border-style: double;
@@ -228,7 +227,7 @@ header nav a {
     padding-right: 10px;
 }
 
-#computer img{
+#computer img {
     height: 80%;
     padding-right: 10px;
 }
@@ -247,30 +246,47 @@ header nav a {
     padding-left: 40px;
 }
 
-
-
 .book {
     color: inherit;
     text-decoration: none;
-    width: 350px;
+    width: 280px;
+    height: 250px;
     border-style: solid;
     border-width: 1px;
     border-radius: 8px;
     border-color: rgb(227, 223, 212);
     margin: 20px;
     margin-top: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 48px;
+    padding-top: 35px;
+    padding-bottom: 35px;
 }
 
-.book:hover{
+.book:hover {
     transform: translateY(-4px);
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
 }
 
 .bookname {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 600;
+}
+
+/* 书籍卡中的描述 */
+.book-describe {
+    height: 120px;
+    font-size: 16px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(227, 223, 212);
+}
+
+/* 书籍卡的元数据 */
+.book-meta {
+    display: flex;
+    height: 25px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* 标签样式 */
@@ -289,11 +305,137 @@ header nav a {
 
 /* 以下是单文章模板位置 */
 
-.single-page{
+/* 单页模板 */
+.single-page {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 100px;
+    /* min-height: 100vh; */
+    /* border-style: dashed; */
+}
+
+
+/* 书籍主页模板 */
+.book-page {
+    display: flex;
+    margin-top: 100px;
+    min-height: 75vh;
+}
+
+/* 书籍模板侧边栏 */
+.sidebar {
+    width: 300px;
+    background: #f8f9fa;
+    border-right: 1px solid #e0e0e0;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* 目录区 */
+.toc-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.toc-list {
+    list-style: none;
+}
+
+.toc-item {
+    margin-bottom: 8px;
+}
+
+.toc-link {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #2c3e50;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.toc-link:hover {
+    background: #e9ecef;
+    font-weight: 700;
+}
+
+.toc-link.active {
+    background: #e9ecef;
+}
+
+
+/* 正文区 */
+.book-content {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.book-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.book-description {
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.chapter-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.chapter-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.chapter-body {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.chapter-body h2 {
+    font-size: 24px;
+    margin: 30px 0 15px;
+    color: #444;
+}
+
+.chapter-body h3 {
+    font-size: 20px;
+    margin: 25px 0 12px;
+    color: #555;
+}
+
+.chapter-body p {
+    margin-bottom: 20px;
+}
+
+.chapter-body code {
+    background: #f5f5f5;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+
+.chapter-body pre {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 20px 0;
+    border-left: 4px solid #007bff;
 }
 
 /* header, header *{

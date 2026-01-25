@@ -44,63 +44,34 @@ menu:
   # 数学书导航
   math:
     - identifier: philosophy-of-mathematics
-      name: 数学及数学哲学的历史
       url: /philosophy-of-mathematics/
       weight: 10
       params:
         icon: "/icons/philosophy-of-mathematics.png"
-        finish: 空
-        describe: 伪文本伪文本伪文本伪文本伪文本伪文本伪文本伪文本
-    - identifier: mathematical-logic
-      name: 数理逻辑基础
-      url: /mathematical-logic/
-      weight: 20
-      params:
-        icon: "/icons/mathematical-logic.png"
-        finish: 空
-        describe: 伪文本伪文本伪文本伪文本伪文本伪文本伪文本伪文本
-    - identifier: set-theory
-      name: 集合论
-      url: /set-theory/
-      weight: 30
-      params:
-        icon: "/icons/set-theory.png"
-        finish: 空
-        describe: 伪文本伪文本伪文本伪文本伪文本伪文本伪文本伪文本
-    - identifier: proof-theory
-      name: 证明论
-      url: /proof-theory/
-      weight: 40
-      params:
-        icon: "/icons/proof-theory.png"
-        finish: 空
-        describe: 伪文本伪文本伪文本伪文本伪文本伪文本伪文本伪文本
 
   computer:
     - identifier: html-tutorial
-      name: html教程
       url: /html-tutorial/
       weight: 10
       params:
         icon: "/icons/html-tutorial.png"
-        finish: 空
-        describe: 伪文本伪文本伪文本伪文本伪文本伪文本伪文本伪文本
     - identifier: css-tutorial
-      name: css教程
       url: /css-tutorial/
       weight: 20
       params:
         icon: "/icons/css-tutorial.png"
-        finish: 空
-        describe: 伪文本伪文本伪文本伪文本伪文本伪文本伪文本伪文本
-    - identifier: javascript-tutorial
-      name: javascript教程
-      url: /javascript-tutorial/
-      weight: 30
-      params:
-        icon: "/icons/javascript-tutorial.png"
-        finish: 空
-        describe: 伪文本伪文本伪文本伪文本伪文本伪文本伪文本伪文本
+    # - identifier: javascript-tutorial
+    #   url: /javascript-tutorial/
+    #   weight: 30
+    #   params:
+    #     icon: "/icons/javascript-tutorial.png"
+
+  other:
+    - identifier: latex
+      url: /latex/
+      weight: 10
+      params: 
+        icon: "/icons/latex.png"
 
 
 disableKinds: ["taxonomy", "term"]
