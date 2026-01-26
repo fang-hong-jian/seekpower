@@ -33,6 +33,7 @@
         </button>
     </div>
     {{/* 书栏 */}}
+    {{/* 遍历数学书 */}}
     <div class="books" id="mathbooks">
         {{range site.Menus.math}}
         {{/* 用$menuItem表示每本书的对象 */}}
@@ -53,6 +54,7 @@
         </a>
         {{end}}
     </div>
+    {{/* 遍历计算机书籍 */}}
     <div class="books" id="computerbooks">
         {{range site.Menus.computer}}
         {{/* 用$menuItem表示每本书的对象 */}}
@@ -73,11 +75,12 @@
         </a>
         {{end}}
     </div>
-
+    {{/* 遍历其他书 */}}
     <div class="books" id="otherbooks">
 
     </div>
 
+    {{/* 遍历全部书 */}}
     <div class="books active" id="allbooks">
         {{range site.Menus.math}}
         {{/* 用$menuItem表示每本书的对象 */}}
