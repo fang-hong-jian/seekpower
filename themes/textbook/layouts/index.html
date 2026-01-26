@@ -3,6 +3,8 @@
 {{ end }}
 
 {{ define "main" }}
+<link rel="stylesheet" href="{{ "css/style-main.css" | relURL}}" />
+<script src="{{ "js/main.js" | relURL}}"></script>
 <div class="home-context">
     <h1 class="young">年轻人,<br />
         你渴望力量吗?
@@ -15,8 +17,11 @@
 {{/* 科目栏 */}}
 <div class="allbooks">
     <div class="booktypes">
-        <button class="subjects active" id="math">
-            <img src="/icons/mathbooks.png"> <span>数学</span>
+        <button class="subjects active" id="all">
+            <img src="/icons/all.png"> <span>全部</span>
+        </button>
+        <button class="subjects" id="math">
+            <img src="/icons/mathbooks.png"><span>数学</span>
         </button>
 
         <button class="subjects" id="computer">
@@ -28,20 +33,27 @@
         </button>
     </div>
     {{/* 书栏 */}}
-    <div class="books active" id="mathbooks">
+    <div class="books" id="mathbooks">
         {{range site.Menus.math}}
         {{/* 用$menuItem表示每本书的对象 */}}
         {{ $menuItem := . }}
-
         {{/* 获取书的主页，使用 identifier 作为路径 */}}
         {{ $bookPage := site.GetPage $menuItem.Identifier }}
         <a href="{{ .URL}}" class="book">
-            
+            <p class="bookname">
+                {{$bookPage.Title}}
+            </p>
+            <p class="book-describe">
+                {{ $bookPage.Params.describe}}
+            </p>
+            <div class="book-meta">
+                <p>共{{ len $bookPage.Params.chapters}}章</p>
+                <p class="finish">{{ $bookPage.Params.finish}}</p>
+            </div>
         </a>
         {{end}}
     </div>
     <div class="books" id="computerbooks">
-
         {{range site.Menus.computer}}
         {{/* 用$menuItem表示每本书的对象 */}}
         {{ $menuItem := . }}
@@ -64,6 +76,46 @@
 
     <div class="books" id="otherbooks">
 
+    </div>
+
+    <div class="books active" id="allbooks">
+        {{range site.Menus.math}}
+        {{/* 用$menuItem表示每本书的对象 */}}
+        {{ $menuItem := . }}
+        {{/* 获取书的主页，使用 identifier 作为路径 */}}
+        {{ $bookPage := site.GetPage $menuItem.Identifier }}
+        <a href="{{ .URL}}" class="book">
+            <p class="bookname">
+                {{$bookPage.Title}}
+            </p>
+            <p class="book-describe">
+                {{ $bookPage.Params.describe}}
+            </p>
+            <div class="book-meta">
+                <p>共{{ len $bookPage.Params.chapters}}章</p>
+                <p class="finish">{{ $bookPage.Params.finish}}</p>
+            </div>
+        </a>
+        {{end}}
+
+        {{range site.Menus.computer}}
+        {{/* 用$menuItem表示每本书的对象 */}}
+        {{ $menuItem := . }}
+        {{/* 获取书的主页，使用 identifier 作为路径 */}}
+        {{ $bookPage := site.GetPage $menuItem.Identifier }}
+        <a href="{{ .URL}}" class="book">
+            <p class="bookname">
+                {{$bookPage.Title}}
+            </p>
+            <p class="book-describe">
+                {{ $bookPage.Params.describe}}
+            </p>
+            <div class="book-meta">
+                <p>共{{ len $bookPage.Params.chapters}}章</p>
+                <p class="finish">{{ $bookPage.Params.finish}}</p>
+            </div>
+        </a>
+        {{end}}
     </div>
 
 </div>

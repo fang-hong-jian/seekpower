@@ -7,14 +7,15 @@
     <title>
 HTML教程
 </title>
-    <link rel="stylesheet" href="https://www.seekpower.top/css/style_baseof.css" />
+    <link rel="stylesheet" href="https://www.seekpower.top/css/style-baseof.css" />
     <link rel="shortcut icon" href="https://www.seekpower.top/icons/logo.png" type="image/x-icon" />
-    <script src="https://www.seekpower.top/js/baseof-script.js"></script>
 </head>
 
 <body>
     
-    <header class="site-header">
+    <link rel="stylesheet" href="https://www.seekpower.top/css/style-header.css" />
+
+<header class="site-header">
     <nav class="left-header" aria-label="主导航">
         
         
@@ -89,6 +90,8 @@ HTML教程
     
     <main>
         
+<link rel="stylesheet" href="https://www.seekpower.top/css/style-book.css" />
+<script src="https://www.seekpower.top/js/book.js"></script>
 <div class="book-page">
     
     <aside class="sidebar">
@@ -138,96 +141,6 @@ HTML教程
         <div id="chapter-container"></div>
     </article>
 </div>
-<script>
-    
-    document.addEventListener('DOMContentLoaded', function () {
-        const tocLinks = document.querySelectorAll('.toc-link');
-        const chapterContainer = document.getElementById('chapter-container');
-        const bookIntro = document.getElementById('book-intro');
-
-        
-        tocLinks.forEach(link => {
-            link.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                const url = this.getAttribute('data-url');
-                const type = this.getAttribute('data-type');
-
-                
-                tocLinks.forEach(l => l.classList.remove('active'));
-                
-                this.classList.add('active');
-
-                if (type === 'book') {
-                    
-                    bookIntro.style.display = 'block';
-                    chapterContainer.innerHTML = '';
-                } else {
-                    
-                    bookIntro.style.display = 'none';
-                    loadChapter(url);
-                }
-            });
-        });
-
-        
-        function loadChapter(url) {
-            
-            chapterContainer.innerHTML = `
-                    <div class="chapter-content">
-                        <div style="text-align: center; padding: 50px;">
-                            <div style="margin-bottom: 20px;">📖 正在加载章节...</div>
-                            <div style="width: 50px; height: 50px; border: 3px solid #f3f3f3; border-top: 3px solid #007bff; border-radius: 50%; margin: 0 auto; animation: spin 1s linear infinite;"></div>
-                        </div>
-                    </div>
-                `;
-
-            
-            const style = document.createElement('style');
-            style.textContent = `
-                    @keyframes spin {
-                        0% { transform: rotate(0deg); }
-                        100% { transform: rotate(360deg); }
-                    }
-                `;
-            document.head.appendChild(style);
-
-            
-            fetch(url)
-                .then(response => response.text())
-                .then(html => {
-                    
-                    const parser = new DOMParser();
-                    const doc = parser.parseFromString(html, 'text/html');
-
-                    
-                    let chapterContent = doc.querySelector('.chapter-content') ||
-                        doc.body;
-
-                    
-                    chapterContainer.innerHTML = `
-                            <div class="chapter-content">
-                                ${chapterContent.innerHTML}
-                            </div>
-                        `;
-                })
-                .catch(error => {
-                    console.error('加载章节失败:', error);
-                    chapterContainer.innerHTML = `
-                            <div class="chapter-content">
-                                <h2>加载失败</h2>
-                                <p>抱歉，无法加载该章节内容。请检查网络连接或刷新页面重试。</p>
-                            </div>
-                        `;
-                });
-        }
-
-        
-        if (tocLinks.length > 0) {
-            tocLinks[0].classList.add('active');
-        }
-    });
-</script>
 
     </main>
 

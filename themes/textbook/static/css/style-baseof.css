@@ -1,0 +1,64 @@
+/* 1. 基础与排版 */
+:root {
+    --color-bg: #fefcf9;
+    /* 背景色 */
+    --color-text: #2c3e50;
+    /* 正文色 */
+    --color-primary: #3498db;
+    /* 主色调（链接等） */
+    --color-border: #eaecef;
+    /* 边框色 */
+    --width-content: 700px;
+    /* 内容区最大宽度 */
+    --font-sans: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+    --active-color: rgb(235, 233, 229);
+}
+
+body {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 15px;
+    /* 基础字号 */
+    line-height: 1.7;
+    /* 行高 */
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    margin: 0;
+}
+
+
+
+/* 以下是单文章模板位置 */
+
+/* 单页模板 */
+.single-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    /* min-height: 100vh; */
+    /* border-style: dashed; */
+}
+
+/* header, header *{
+    border-style: dashed;
+} */
+
+/* main,main *{
+    border-style: dashed;
+} */
+
+/* book,book *{
+    border-style: dashed;
+} */
+
+/* :hover{
+    border-style: dashed;
+} */
+
+/* 7. 响应式：在手机上调整 */
+@media (max-width: 1200px) {
+    .home-right {
+        display: none;
+    }
+}

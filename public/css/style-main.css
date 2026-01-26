@@ -1,0 +1,178 @@
+/* 主页大标题和图片 */
+.home-context {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 100px;
+    padding-bottom: 10px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(227, 223, 212);
+    /* border-bottom-color: rgba(85, 162, 160, 0.15); */
+}
+
+
+/* 主页标题字 */
+.young {
+    width: 600px;
+    flex: 1, 1, 500px;
+    font-size: 40px;
+}
+
+/* 主页大图 */
+.home-right {
+    width: 800px;
+    flex: 1, 1, 500px;
+}
+
+/* 下方导航栏 */
+.allbooks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* background-color: rgb(250, 248, 242); */
+    min-height: 500px;
+}
+
+/* 科目栏 */
+.booktypes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: rgb(227, 223, 212);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(227, 223, 212);
+}
+
+.subjects {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 15px;
+    padding-left: 30px;
+    font-family: var(--font-sans);
+    font-size: 22px;
+    font-weight: 600;
+    margin: 8px;
+}
+
+/* 当前展示的学科 */
+.subjects.active {
+    background-color: rgb(235, 233, 229);
+    border-radius: 8px;
+}
+
+/* 添加自定义聚焦样式 */
+/* .mathbooks:focus-visible,
+.computerbooks:focus-visible {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+} */
+
+/* 悬停时 */
+.subjects:hover {
+    background-color: rgb(235, 233, 229);
+    border-radius: 8px;
+}
+
+/* 激活时 */
+.subjects:active {
+    transform: scale(0.98);
+}
+
+.subjects img {
+    height: 100%;
+    padding-right: 8px;
+}
+
+#math img {
+    height: 90%;
+    padding-right: 10px;
+}
+
+#computer img {
+    height: 80%;
+    padding-right: 10px;
+}
+
+/* 陈列栏 */
+.books {
+    display: none;
+}
+
+.books.active {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-left: 40px;
+}
+
+.book {
+    color: inherit;
+    text-decoration: none;
+    width: 280px;
+    height: 250px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+    border-color: rgb(227, 223, 212);
+    margin: 20px;
+    margin-top: 30px;
+    padding: 48px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.book:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bookname {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* 书籍卡中的描述 */
+.book-describe {
+    height: 120px;
+    font-size: 16px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(227, 223, 212);
+}
+
+/* 书籍卡的元数据 */
+.book-meta {
+    display: flex;
+    height: 25px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 标签样式 */
+.finish {
+    display: inline-block;
+    padding: 4px 8px;
+    margin: 4px 8px 4px 8px;
+    background-color: #f2f2f2;
+    color: #333;
+    border-radius: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
