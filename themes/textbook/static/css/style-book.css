@@ -57,6 +57,7 @@
     overflow-y: auto;
 }
 
+
 .book-title {
     font-size: 32px;
     margin-bottom: 20px;
@@ -71,6 +72,7 @@
 }
 
 .chapter-content {
+    margin-top: 100px;
     max-width: 800px;
     margin: 0 auto;
 }

@@ -30,15 +30,13 @@
 
     {{/* 正文区 */}}
     <article class="book-content">
-        <div id="book-intro" class="chapter-content">
+        <div id="book-intro">
             <h1 class="book-title">{{ .Title }}</h1>
             <div class="book-description">
                 {{ .Content }}
             </div>
         </div>
-
-        <!-- 章节内容会动态加载到这里 -->
-        <div id="chapter-container"></div>
+        <div class="chapter-content" id="chapter-container"></div>
     </article>
 </div>
 {{end}}

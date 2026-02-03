@@ -42,6 +42,7 @@ menu:
       weight: 20
 
   # 数学书导航
+  # 注意每个identifier的值需要和每本book的支目录名相同
   math:
     - identifier: philosophy-of-mathematics
       url: /philosophy-of-mathematics/
