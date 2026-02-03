@@ -2,7 +2,7 @@
 .book-page {
     display: flex;
     margin-top: 60px;
-    min-height: 80vh;
+    min-height: 85vh;
 }
 
 /* 书籍模板侧边栏 */
@@ -17,13 +17,24 @@
 }
 
 /* 目录区 */
+/* 目录标头 */
 .toc-title {
     font-family: 'Inter', sans-serif;
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 20px;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
     border-bottom: 1px solid #e0e0e0;
+}
+
+/* 书名在目录区上方显示 */
+.toc-header{
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.toc-book-title{
+    font-size: 30px;
+    font-weight: 500;
 }
 
 .toc-list {
@@ -36,7 +47,8 @@
 
 .toc-link {
     display: block;
-    padding: 10px 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-decoration: none;
     color: #2c3e50;
     border-radius: 6px;

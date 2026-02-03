@@ -2,7 +2,7 @@
 {{ .Title }}
 {{ end }}
 
-{{/*  书籍主页  */}}
+{{/* 书籍主页 */}}
 
 {{define "main"}}
 <link rel="stylesheet" href="{{ "css/style-book.css" | relURL}}" />
@@ -11,7 +11,10 @@
     {{/* 侧边栏区 */}}
     <aside class="sidebar">
         <div class="toc-title">目录</div>
-        <div class="toc-book-title">{{ .Title}}</div>
+        <div class="toc-header">
+            <div class="toc-book-title">{{ .Title}}</div>
+            <div>共 {{ len .Params.chapters}} 章</div>
+        </div>
         <ul class="toc-list">
             <!-- 书籍简介链接 -->
             <li class="toc-item">
@@ -40,7 +43,7 @@
             </div>
         </div>
 
-        {{/*  动态加载容器  */}}
+        {{/* 动态加载容器 */}}
         <div id="chapter-container"></div>
     </article>
 </div>
