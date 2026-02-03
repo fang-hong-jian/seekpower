@@ -71,9 +71,8 @@ menu:
     - identifier: latex
       url: /latex/
       weight: 10
-      params: 
+      params:
         icon: "/icons/latex.png"
-
 
 disableKinds: ["taxonomy", "term"]
 hasCJKLanguage: true

@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const doc = parser.parseFromString(html, 'text/html');
 
                 // 提取章节内容（章节放在book-content类中）
-                let chapterContent = doc.querySelector('.book-content')
+                let chapterContent = doc.querySelector('.test')
 
                 // 清理并插入到容器中
                 chapterContainer.innerHTML = `
