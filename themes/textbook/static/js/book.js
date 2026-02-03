@@ -57,14 +57,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 const parser = new DOMParser();
                 const doc = parser.parseFromString(html, 'text/html');
 
-                // 查找章节内容（假设章节放在chapter-content类中）
-                let chapterContent = doc.querySelector('.chapter-content')
+                // 提取章节内容（章节放在book-content类中）
+                let chapterContent = doc.querySelector('.book-content')
 
                 // 清理并插入到容器中
                 chapterContainer.innerHTML = `
-                            <div class="chapter-content">
                                 ${chapterContent.innerHTML}
-                            </div>
                         `;
             })
             .catch(error => {
