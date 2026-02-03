@@ -1,23 +1,26 @@
 /* 书籍主页模板 */
 .book-page {
     display: flex;
-    margin-top: 100px;
-    min-height: 75vh;
+    margin-top: 60px;
+    min-height: 80vh;
 }
 
 /* 书籍模板侧边栏 */
 .sidebar {
+    display: flex;
+    flex-direction: column;
     width: 300px;
     background: #f8f9fa;
     border-right: 1px solid #e0e0e0;
-    padding: 20px;
+    padding: 30px;
     overflow-y: auto;
 }
 
 /* 目录区 */
 .toc-title {
+    font-family: 'Inter', sans-serif;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 20px;
     padding-bottom: 10px;
     border-bottom: 1px solid #e0e0e0;
@@ -74,7 +77,6 @@
 .chapter-content {
     margin-top: 100px;
     max-width: 800px;
-    margin: 0 auto;
 }
 
 .chapter-title {

@@ -2,6 +2,8 @@
 {{ .Title }}
 {{ end }}
 
+{{/*  书籍主页  */}}
+
 {{define "main"}}
 <link rel="stylesheet" href="{{ "css/style-book.css" | relURL}}" />
 <script src="{{ "js/book.js" | relURL}}"></script>
@@ -9,6 +11,7 @@
     {{/* 侧边栏区 */}}
     <aside class="sidebar">
         <div class="toc-title">目录</div>
+        <div class="toc-book-title">{{ .Title}}</div>
         <ul class="toc-list">
             <!-- 书籍简介链接 -->
             <li class="toc-item">

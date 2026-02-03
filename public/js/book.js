@@ -1,6 +1,7 @@
 // 简单的内容加载器
 document.addEventListener('DOMContentLoaded', function () {
     const tocLinks = document.querySelectorAll('.toc-link');
+    // 获取书籍主页中的章容器
     const chapterContainer = document.getElementById('chapter-container');
     const bookIntro = document.getElementById('book-intro');
 
@@ -58,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const doc = parser.parseFromString(html, 'text/html');
 
                 // 提取章节内容（章节放在book-content类中）
-                let chapterContent = doc.querySelector('.test')
+                let chapterContent = doc.querySelector('.book-content')
 
                 // 清理并插入到容器中
                 chapterContainer.innerHTML = `
