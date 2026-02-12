@@ -9,7 +9,7 @@ chapters:
     - html-introduction
     - html-tags
     - html-history
-describe: 一种标记语言。通过一系列标签可以将网络上的文档格式统一，使分散的Internet资源连接为一个逻辑整体。
+describe: HTML一种标记语言。通过一系列标签可以将网络上的文档格式统一，使分散的Internet资源连接为一个逻辑整体，前端必备。
 ---
 
 这里是书籍主页的正文，一般是课程介绍

@@ -11,19 +11,10 @@
     <loc>https://www.seekpower.top/login/</loc>
     <lastmod>2026-01-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.seekpower.top/html-tutorial/html-introduction/</loc>
-    <lastmod>2026-01-16T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.seekpower.top/css-tutorial/</loc>
     <lastmod>2026-01-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.seekpower.top/html-tutorial/</loc>
-    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.seekpower.top/html-tutorial/html-history/</loc>
-    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.seekpower.top/html-tutorial/html-tags/</loc>
     <lastmod>2026-01-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.seekpower.top/about-me/</loc>
@@ -34,5 +25,14 @@
   </url><url>
     <loc>https://www.seekpower.top/</loc>
     <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.seekpower.top/html-tutorial/html-history/</loc>
+    <lastmod>2026-01-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.seekpower.top/html-tutorial/html-tags/</loc>
+    <lastmod>2026-01-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.seekpower.top/html-tutorial/html-introduction/</loc>
+    <lastmod>2026-01-26T00:00:00+00:00</lastmod>
   </url>
 </urlset>
