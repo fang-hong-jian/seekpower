@@ -4,5 +4,10 @@ date: 2026-01-15
 type: page
 layout: single
 ---
-
+<style>
+    #about-me {
+        background-color: var(--active-bgcolor);
+        border-radius: 8px;
+}
+</style>
 资质愚钝的大龄散修，兴趣使然的学生。

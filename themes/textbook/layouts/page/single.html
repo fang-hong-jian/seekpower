@@ -3,7 +3,7 @@
 {{ end }}
 
 {{ define "main" }}
-{{/*  文档元数据  */}}
+{{/* 文档元数据 */}}
 <div class="single-page">
     <header>
         <h1 class="booktitle">{{ .Title }}</h1>
@@ -11,7 +11,7 @@
         <time datetime="{{ .Date.Format " 2006-01-02" }}">{{ .Date.Format "2006年1月2日" }}</time>
         {{ end }}
     </header>
-    {{/*  md文件内容  */}}
+    {{/* md文件内容 */}}
     <div class="content">
         {{ .Content }}
     </div>

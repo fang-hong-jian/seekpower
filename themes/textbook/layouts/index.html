@@ -4,6 +4,12 @@
 
 {{ define "main" }}
 <link rel="stylesheet" href="{{ "css/style-main.css" | relURL}}" />
+<style>
+    #home {
+        background-color: var(--active-bgcolor);
+        border-radius: 8px;
+    }
+</style>
 <script src="{{ "js/main.js" | relURL}}"></script>
 <div class="home-context">
     <h1 class="young">年轻人,<br />

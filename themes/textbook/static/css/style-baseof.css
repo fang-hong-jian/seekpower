@@ -11,7 +11,8 @@
     --width-content: 700px;
     /* 内容区最大宽度 */
     --font-sans: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
-    --active-color: rgb(235, 233, 229);
+    /* 激活时导航按钮背景颜色 */
+    --active-bgcolor:rgb(235, 233, 229);
 }
 
 body {

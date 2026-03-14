@@ -81,4 +81,7 @@ hasCJKLanguage: true
 canonifyURLs: true
 
 # 使markdown可以内嵌html
-unsafe: true
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

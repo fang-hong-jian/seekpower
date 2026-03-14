@@ -1,34 +1,34 @@
 <link rel="stylesheet" href="{{ "css/style-header.css" | relURL}}" />
 
-<header class="site-header">
-    <nav class="left-header" aria-label="主导航">
+<header>
+    <nav class="left" aria-label="主导航">
         <!-- 循环遍历在 hugo.yaml 中定义的 “main” 菜单 -->
         {{ range site.Menus.main }}
         {{/* 判断是不是作者名 */}}
         {{if eq .Identifier "author"}}
 
         {{/* 作者名和logo用横盒子 */}}
-            <a href="{{ .URL}}" class="logo author-div">
-                <img src="{{ .Params.icon}}" id="logo" />
-                <p id="{{.KeyName}}">
-                    {{ .Name }}
-                </p>
-            </a>
+        <a href="{{ .URL}}" id="logo">
+            <img src="{{ .Params.icon}}" />
+            <p id="{{.KeyName}}">
+                {{ .Name }}
+            </p>
+        </a>
         {{else}}
         {{/* 左侧每个菜单项用纵盒子，上面是图标 */}}
-            <a href="{{ .URL}}" class="menus-left-div">
-                <img src="{{ .Params.icon}}" class="menus-left-icons" />
-                <p class="home-menus-left">
-                    {{ .Name }}
-                </p>
-            </a>
+        <a href="{{ .URL}}" class="menus-left" id="{{ .Identifier }}">
+            <img src="{{ .Params.icon}}" />
+            <p>
+                {{ .Name }}
+            </p>
+        </a>
 
         {{end}}
 
         {{ end }}
     </nav>
     {{/* 右侧导航目前只有文字 */}}
-    <nav class="right_header" aria-label="副导航">
+    <nav class="right" aria-label="副导航">
         <!-- 循环遍历在 hugo.yaml 中定义的 “second” 菜单 -->
         {{ range site.Menus.second }}
         <a href="{{ .URL}}" id="{{.KeyName}}" class="home-menus-right">
