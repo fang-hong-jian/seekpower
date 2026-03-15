@@ -41,39 +41,6 @@ menu:
       url: /login/
       weight: 20
 
-  # 数学书导航
-  # 注意每个identifier的值需要和每本book的支目录名相同
-  math:
-    - identifier: philosophy-of-mathematics
-      url: /philosophy-of-mathematics/
-      weight: 10
-      params:
-        icon: "/icons/philosophy-of-mathematics.png"
-
-  computer:
-    - identifier: html-tutorial
-      url: /html-tutorial/
-      weight: 10
-      params:
-        icon: "/icons/html-tutorial.png"
-    - identifier: css-tutorial
-      url: /css-tutorial/
-      weight: 20
-      params:
-        icon: "/icons/css-tutorial.png"
-    # - identifier: javascript-tutorial
-    #   url: /javascript-tutorial/
-    #   weight: 30
-    #   params:
-    #     icon: "/icons/javascript-tutorial.png"
-
-  other:
-    - identifier: latex
-      url: /latex/
-      weight: 10
-      params:
-        icon: "/icons/latex.png"
-
 disableKinds: ["taxonomy", "term"]
 hasCJKLanguage: true
 

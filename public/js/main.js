@@ -1,17 +1,14 @@
 // 将代码放在DOMContentLoaded事件中，确保DOM加载完成后再执行
 window.addEventListener('DOMContentLoaded', function () {
-    console.log('页面加载完成！开始绑定按钮事件。');
-
-    const subjectButtons = document.querySelectorAll('.subjects');
-    console.log('找到的按钮数量：', subjectButtons.length);
+    // 获取所有科目导航按钮对象
+    const subjectButtons = document.querySelectorAll('.subject');
 
     // 为每个按钮添加点击事件
     subjectButtons.forEach(button => {
         button.addEventListener('click', function () {
-            // 获取当前按钮的id
+            //点击执行以下内容
+            // 获取被点击的按钮的id
             const buttonId = this.id;
-
-            console.log('点击了按钮：', buttonId);
 
             // 移除所有按钮的active类
             subjectButtons.forEach(btn => {

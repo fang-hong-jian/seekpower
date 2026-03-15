@@ -31,7 +31,7 @@
     <nav class="right" aria-label="副导航">
         <!-- 循环遍历在 hugo.yaml 中定义的 “second” 菜单 -->
         {{ range site.Menus.second }}
-        <a href="{{ .URL}}" id="{{.KeyName}}" class="home-menus-right">
+        <a href="{{ .URL}}" id="{{.KeyName}}">
             {{ .Name }}
         </a>
         {{ end }}

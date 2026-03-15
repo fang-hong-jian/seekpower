@@ -85,7 +85,7 @@ a.menus-left>p {
     margin: 0px;
 }
 
-.home-menus-right {
+nav.right>a {
     padding-left: 5px;
     padding-right: 5px;
     font-size: 16px;

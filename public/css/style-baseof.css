@@ -12,7 +12,11 @@
     /* 内容区最大宽度 */
     --font-sans: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
     /* 激活时导航按钮背景颜色 */
-    --active-bgcolor:rgb(235, 233, 229);
+    --active-bgcolor: rgb(235, 233, 229);
+    /* 分界线颜色 */
+    --border-color: rgb(227, 223, 212);
+    /* 标符背景颜色 */
+    --tag-bacolor: #f2f2f2;
 }
 
 body {

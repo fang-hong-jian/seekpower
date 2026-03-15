@@ -10,8 +10,7 @@
     padding-bottom: 10px;
     border-bottom-style: solid;
     border-bottom-width: 1px;
-    border-bottom-color: rgb(227, 223, 212);
-    /* border-bottom-color: rgba(85, 162, 160, 0.15); */
+    border-bottom-color: var(--border-color);
 }
 
 
@@ -28,18 +27,17 @@
     flex: 1, 1, 500px;
 }
 
-/* 下方导航栏 */
-.allbooks {
+/* 书籍阵列总框 */
+div.display {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    /* background-color: rgb(250, 248, 242); */
     min-height: 500px;
 }
 
 /* 科目栏 */
-.booktypes {
+.subjects {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -48,13 +46,14 @@
     padding-right: 30px;
     border-top-style: solid;
     border-top-width: 1px;
-    border-top-color: rgb(227, 223, 212);
+    border-top-color: var(--border-color);
     border-bottom-style: solid;
     border-bottom-width: 1px;
-    border-bottom-color: rgb(227, 223, 212);
+    border-bottom-color: var(--border-color);
 }
 
-.subjects {
+/* 单个科目导航按钮 */
+.subject {
     background: none;
     border: none;
     display: flex;
@@ -68,44 +67,52 @@
     margin: 8px;
 }
 
-/* 当前展示的学科 */
-.subjects.active {
-    background-color: var(--active-bgcolor);
-    border-radius: 8px;
-}
-
-/* 添加自定义聚焦样式 */
-/* .mathbooks:focus-visible,
-.computerbooks:focus-visible {
-    outline: 2px solid #007bff;
-    outline-offset: 2px;
-} */
-
-/* 悬停时 */
-.subjects:hover {
-    background-color: var(--active-bgcolor);
-    border-radius: 8px;
-}
-
-/* 激活时 */
-.subjects:active {
-    transform: scale(0.98);
-}
-
-.subjects img {
+/* 科目导航logo */
+.subject img {
     height: 100%;
     padding-right: 8px;
 }
 
+/* 数学logo微调 */
 #math img {
     height: 90%;
     padding-right: 10px;
 }
 
+/* 认算机logo微调 */
 #computer img {
     height: 80%;
     padding-right: 10px;
 }
+
+/* 激活的科目导航按钮 */
+.subject.active {
+    background-color: var(--active-bgcolor);
+    border-radius: 8px;
+}
+/* 悬停时科目导航按钮 */
+.subject:hover {
+    background-color: var(--active-bgcolor);
+    border-radius: 8px;
+    /* transform: scale(0.98); */
+}
+
+/* 点击时科目导航按钮 */
+.subject:active {
+    transform: scale(0.98);
+}
+
+
+
+/* 下方导航栏 */
+/* .allbooks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-height: 500px;
+} */
+
 
 /* 陈列栏 */
 .books {
@@ -121,7 +128,7 @@
     padding-left: 40px;
 }
 
-.book {
+a.book {
     color: inherit;
     text-decoration: none;
     width: 280px;
@@ -129,7 +136,7 @@
     border-style: solid;
     border-width: 1px;
     border-radius: 8px;
-    border-color: rgb(227, 223, 212);
+    border-color: var(--border-color);
     margin: 20px;
     margin-top: 30px;
     padding: 48px;
@@ -137,7 +144,7 @@
     padding-bottom: 35px;
 }
 
-.book:hover {
+a.book:hover {
     transform: translateY(-4px);
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
 }
@@ -153,7 +160,7 @@
     font-size: 16px;
     border-bottom-style: solid;
     border-bottom-width: 1px;
-    border-bottom-color: rgb(227, 223, 212);
+    border-bottom-color: var(--border-color);
 }
 
 /* 书籍卡的元数据 */
@@ -169,7 +176,7 @@
     display: inline-block;
     padding: 4px 8px;
     margin: 4px 8px 4px 8px;
-    background-color: #f2f2f2;
+    background-color: var(--tag-bacolor);
     color: #333;
     border-radius: 5px;
     font-size: 14px;

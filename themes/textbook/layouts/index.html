@@ -20,33 +20,40 @@
 
 </div>
 
-{{/* 科目栏 */}}
-<div class="allbooks">
-    <div class="booktypes">
-        <button class="subjects active" id="all">
+{{/* 书籍陈列栏 */}}
+<div class="books-display">
+    {{/* 科目 */}}
+    <div class="subjects">
+        {{/* 全部科目 */}}
+        <button class="subject active" id="all">
             <img src="/icons/all.png"> <span>全部</span>
         </button>
-        <button class="subjects" id="math">
+        {{/* 数学科目 */}}
+        <button class="subject" id="math">
             <img src="/icons/mathbooks.png"><span>数学</span>
         </button>
-
-        <button class="subjects" id="computer">
+        {{/* 计算机科目 */}}
+        <button class="subject" id="computer">
             <img src="/icons/computerbooks.png"> <span>计算机</span>
         </button>
-
-        <button class="subjects" id="other">
+        {{/* 其他科目 */}}
+        <button class="subject" id="other">
             <img src="/icons/other.png"> <span>其他</span>
         </button>
     </div>
-    {{/* 书栏 */}}
-    {{/* 遍历数学书 */}}
+
+
+    {{/* 书籍卡 */}}
+    {{/* 数学书 */}}
     <div class="books" id="mathbooks">
-        {{range site.Menus.math}}
-        {{/* 用$menuItem表示每本书的对象 */}}
-        {{ $menuItem := . }}
-        {{/* 获取书的主页，使用 identifier 作为路径 */}}
-        {{ $bookPage := site.GetPage $menuItem.Identifier }}
-        <a href="{{ .URL}}" class="book">
+        {{/* 遍历数学书籍 */}}
+        {{range .Site.Data.booknames.book_name.math}}
+        {{/* 将每本数学书对象定义为$mathbook */}}
+        {{ $mathbook := . }}
+        {{/* 获取书的主页对象，定义为$bookPage，使用 identifier 作为路径 */}}
+        {{$bookPage := site.GetPage $mathbook.identifier}}
+        {{/* 关于书籍的其余信息皆从书籍主页md文件中获取 */}}
+        <a href="{{ .url}}" class="book">
             <p class="bookname">
                 {{$bookPage.Title}}
             </p>
@@ -60,14 +67,15 @@
         </a>
         {{end}}
     </div>
+
     {{/* 遍历计算机书籍 */}}
     <div class="books" id="computerbooks">
-        {{range site.Menus.computer}}
+        {{range .Site.Data.booknames.book_name.computer}}
         {{/* 用$menuItem表示每本书的对象 */}}
-        {{ $menuItem := . }}
+        {{ $computerbook := . }}
         {{/* 获取书的主页，使用 identifier 作为路径 */}}
-        {{ $bookPage := site.GetPage $menuItem.Identifier }}
-        <a href="{{ .URL}}" class="book">
+        {{ $bookPage := site.GetPage $computerbook.identifier }}
+        <a href="{{ .url}}" class="book">
             <p class="bookname">
                 {{$bookPage.Title}}
             </p>
@@ -81,19 +89,59 @@
         </a>
         {{end}}
     </div>
+
     {{/* 遍历其他书 */}}
     <div class="books" id="otherbooks">
-
+        {{range .Site.Data.booknames.book_name.other}}
+        {{/* 用$menuItem表示每本书的对象 */}}
+        {{ $otherbook := . }}
+        {{/* 获取书的主页，使用 identifier 作为路径 */}}
+        {{ $bookPage := site.GetPage $otherbook.identifier }}
+        <a href="{{ .url}}" class="book">
+            <p class="bookname">
+                {{$bookPage.Title}}
+            </p>
+            <p class="book-describe">
+                {{ $bookPage.Params.describe}}
+            </p>
+            <div class="book-meta">
+                <p>共{{ len $bookPage.Params.chapters}}章</p>
+                <p class="finish">{{ $bookPage.Params.finish}}</p>
+            </div>
+        </a>
+        {{end}}
     </div>
+
 
     {{/* 遍历全部书 */}}
     <div class="books active" id="allbooks">
-        {{range site.Menus.math}}
+        {{/* 遍历数学书籍 */}}
+        {{range .Site.Data.booknames.book_name.math}}
+        {{/* 将每本数学书对象定义为$mathbook */}}
+        {{ $mathbook := . }}
+        {{/* 获取书的主页对象，定义为$bookPage，使用 identifier 作为路径 */}}
+        {{$bookPage := site.GetPage $mathbook.identifier}}
+        {{/* 关于书籍的其余信息皆从书籍主页md文件中获取 */}}
+        <a href="{{ .url}}" class="book">
+            <p class="bookname">
+                {{$bookPage.Title}}
+            </p>
+            <p class="book-describe">
+                {{ $bookPage.Params.describe}}
+            </p>
+            <div class="book-meta">
+                <p>共{{ len $bookPage.Params.chapters}}章</p>
+                <p class="finish">{{ $bookPage.Params.finish}}</p>
+            </div>
+        </a>
+        {{end}}
+        {{/* 遍历计算机书籍 */}}
+        {{range .Site.Data.booknames.book_name.computer}}
         {{/* 用$menuItem表示每本书的对象 */}}
-        {{ $menuItem := . }}
+        {{ $computerbook := . }}
         {{/* 获取书的主页，使用 identifier 作为路径 */}}
-        {{ $bookPage := site.GetPage $menuItem.Identifier }}
-        <a href="{{ .URL}}" class="book">
+        {{ $bookPage := site.GetPage $computerbook.identifier }}
+        <a href="{{ .url}}" class="book">
             <p class="bookname">
                 {{$bookPage.Title}}
             </p>
@@ -107,12 +155,13 @@
         </a>
         {{end}}
 
-        {{range site.Menus.computer}}
+        {{/* 遍历其他书 */}}
+        {{range .Site.Data.booknames.book_name.other}}
         {{/* 用$menuItem表示每本书的对象 */}}
-        {{ $menuItem := . }}
+        {{ $otherbook := . }}
         {{/* 获取书的主页，使用 identifier 作为路径 */}}
-        {{ $bookPage := site.GetPage $menuItem.Identifier }}
-        <a href="{{ .URL}}" class="book">
+        {{ $bookPage := site.GetPage $otherbook.identifier }}
+        <a href="{{ .url}}" class="book">
             <p class="bookname">
                 {{$bookPage.Title}}
             </p>
@@ -126,7 +175,6 @@
         </a>
         {{end}}
     </div>
-
 </div>
 <!-- .Content 会渲染 content/_index.md 文件中的Markdown内容 -->
 {{ .Content }}
