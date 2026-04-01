@@ -1,0 +1,23 @@
+---
+title: $\LaTeX$简介
+type: page
+layout: chapter
+publishDate: 2023-10-01
+lastmod: 2026-01-26
+---
+
+什么是$\LaTeX$?
+
+![](img/latex.png)
+
+
+$$
+\frac{1}{2}
+$$
+
+勾股定理可以表示为 $a^2 + b^2 = c^2$，其中 $c$ 是斜边。
+
+二次方程的求根公式为：
+$$
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$

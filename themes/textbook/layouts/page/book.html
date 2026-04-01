@@ -7,44 +7,44 @@
 {{define "main"}}
 <link rel="stylesheet" href="{{ "css/style-book.css" | relURL}}" />
 <script src="{{ "js/book.js" | relURL}}"></script>
-<div class="book-page">
-    {{/* 侧边栏区 */}}
-    <aside class="sidebar">
+{{/* 侧边栏区 */}}
+<div class="tocs">
+    <div class="toc-header">
         <div class="toc-title">目录</div>
-        <div class="toc-header">
-            <div class="toc-book-title">{{ .Title}}</div>
-            <div>共 {{ len .Params.chapters}} 章</div>
+        <div class="book-meta">
+            <p><span>共 {{ len .Params.chapters}}章</span><span>作者:{{ .Page.Params.author}}</span></p>
         </div>
-        <ul class="toc-list">
-            <!-- 书籍简介链接 -->
-            <li class="toc-item">
-                <a href="#book-intro" class="toc-link" data-url="{{ .Permalink }}" data-type="book">
-                    书籍简介
-                </a>
-            </li>
+    </div>
 
-            <!-- 各章节链接 -->
-            {{ range .Pages }}
-            <li class="toc-item">
-                <a href="#{{ .File.BaseFileName }}" class="toc-link" data-url="{{ .Permalink }}" data-type="chapter">
-                    {{ .Title }}
-                </a>
-            </li>
-            {{ end }}
-        </ul>
-    </aside>
+    <ul class="toc-list">
+        <!-- 书籍简介链接 -->
+        <li class="toc-item">
+            <a href="#book-intro" class="toc-link" data-url="{{ .Permalink }}" data-type="book">
+                书籍简介
+            </a>
+        </li>
 
-    {{/* 正文区 */}}
-    <article class="book-content">
-        <div id="book-intro">
-            <h1 class="book-title">{{ .Title }}</h1>
-            <div class="book-description">
-                {{ .Content }}
-            </div>
-        </div>
-
-        {{/* 动态加载容器 */}}
-        <div id="chapter-container"></div>
-    </article>
+        <!-- 各章节链接 -->
+        {{ range .Pages }}
+        <li class="toc-item">
+            <a href="#{{ .File.BaseFileName }}" class="toc-link" data-url="{{ .Permalink }}" data-type="chapter">
+                {{ .Title }}
+            </a>
+        </li>
+        {{ end }}
+    </ul>
 </div>
+
+{{/* 正文区 */}}
+<article class="book-content">
+    <div id="book-intro">
+        <h1 class="book-title">{{ .Title }}</h1>
+        <div class="book-description">
+            {{ .Content }}
+        </div>
+    </div>
+
+    {{/* 动态加载容器 */}}
+    <div id="chapter-container"></div>
+</article>
 {{end}}

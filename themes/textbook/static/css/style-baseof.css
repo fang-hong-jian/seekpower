@@ -2,7 +2,7 @@
 :root {
     --color-bg: #fefcf9;
     /* 背景色 */
-    --color-text: #2c3e50;
+    --color-text: rgba(0, 0, 0, 0.85);
     /* 正文色 */
     --color-primary: #3498db;
     /* 主色调（链接等） */

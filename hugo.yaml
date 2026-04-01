@@ -44,11 +44,18 @@ menu:
 disableKinds: ["taxonomy", "term"]
 hasCJKLanguage: true
 
-# 所有链接转换为绝对链接
-canonifyURLs: true
+cleanDestinationDir: true #每次生成前清空public目录
+enableEmoji: true #启用emoji表情
+enableInlineShortcodes: true #启用内联短代码
 
 # 使markdown可以内嵌html
 markup:
   goldmark:
+    extensions:
+      cjk:
+        enable: true # 必须先启用 CJK 扩展
+        eastAsianLineBreaks: true # 忽略东亚字符间的软换行
+        eastAsianLineBreaksStyle: simple
+        escapedSpace: false
     renderer:
       unsafe: true

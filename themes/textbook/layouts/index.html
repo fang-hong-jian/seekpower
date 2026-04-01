@@ -54,15 +54,15 @@
         {{$bookPage := site.GetPage $mathbook.identifier}}
         {{/* 关于书籍的其余信息皆从书籍主页md文件中获取 */}}
         <a href="{{ .url}}" class="book">
-            <p class="bookname">
+            <div class="bookname">
                 {{$bookPage.Title}}
-            </p>
-            <p class="book-describe">
+            </div>
+            <div class="book-describe">
                 {{ $bookPage.Params.describe}}
-            </p>
+            </div>
             <div class="book-meta">
-                <p>共{{ len $bookPage.Params.chapters}}章</p>
-                <p class="finish">{{ $bookPage.Params.finish}}</p>
+                <div>共{{ len $bookPage.Params.chapters}}章</div>
+                <div class="finish">{{ $bookPage.Params.finish}}</div>
             </div>
         </a>
         {{end}}
@@ -76,15 +76,15 @@
         {{/* 获取书的主页，使用 identifier 作为路径 */}}
         {{ $bookPage := site.GetPage $computerbook.identifier }}
         <a href="{{ .url}}" class="book">
-            <p class="bookname">
+            <div class="bookname">
                 {{$bookPage.Title}}
-            </p>
-            <p class="book-describe">
+            </div>
+            <div class="book-describe">
                 {{ $bookPage.Params.describe}}
-            </p>
+            </div>
             <div class="book-meta">
-                <p>共{{ len $bookPage.Params.chapters}}章</p>
-                <p class="finish">{{ $bookPage.Params.finish}}</p>
+                <div>共{{ len $bookPage.Params.chapters}}章</div>
+                <div class="finish">{{ $bookPage.Params.finish}}</div>
             </div>
         </a>
         {{end}}
@@ -98,15 +98,15 @@
         {{/* 获取书的主页，使用 identifier 作为路径 */}}
         {{ $bookPage := site.GetPage $otherbook.identifier }}
         <a href="{{ .url}}" class="book">
-            <p class="bookname">
+            <div class="bookname">
                 {{$bookPage.Title}}
-            </p>
-            <p class="book-describe">
+            </div>
+            <div class="book-describe">
                 {{ $bookPage.Params.describe}}
-            </p>
+            </div>
             <div class="book-meta">
-                <p>共{{ len $bookPage.Params.chapters}}章</p>
-                <p class="finish">{{ $bookPage.Params.finish}}</p>
+                <div>共{{ len $bookPage.Params.chapters}}章</div>
+                <div class="finish">{{ $bookPage.Params.finish}}</div>
             </div>
         </a>
         {{end}}
@@ -123,12 +123,12 @@
         {{$bookPage := site.GetPage $mathbook.identifier}}
         {{/* 关于书籍的其余信息皆从书籍主页md文件中获取 */}}
         <a href="{{ .url}}" class="book">
-            <p class="bookname">
+            <div class="bookname">
                 {{$bookPage.Title}}
-            </p>
-            <p class="book-describe">
+            </div>
+            <div class="book-describe">
                 {{ $bookPage.Params.describe}}
-            </p>
+            </div>
             <div class="book-meta">
                 <p>共{{ len $bookPage.Params.chapters}}章</p>
                 <p class="finish">{{ $bookPage.Params.finish}}</p>
@@ -142,15 +142,15 @@
         {{/* 获取书的主页，使用 identifier 作为路径 */}}
         {{ $bookPage := site.GetPage $computerbook.identifier }}
         <a href="{{ .url}}" class="book">
-            <p class="bookname">
+            <div class="bookname">
                 {{$bookPage.Title}}
-            </p>
-            <p class="book-describe">
+            </div>
+            <div class="book-describe">
                 {{ $bookPage.Params.describe}}
-            </p>
+            </div>
             <div class="book-meta">
-                <p>共{{ len $bookPage.Params.chapters}}章</p>
-                <p class="finish">{{ $bookPage.Params.finish}}</p>
+                <div>共{{ len $bookPage.Params.chapters}}章</div>
+                <div class="finish">{{ $bookPage.Params.finish}}</div>
             </div>
         </a>
         {{end}}
@@ -162,15 +162,15 @@
         {{/* 获取书的主页，使用 identifier 作为路径 */}}
         {{ $bookPage := site.GetPage $otherbook.identifier }}
         <a href="{{ .url}}" class="book">
-            <p class="bookname">
+            <div class="bookname">
                 {{$bookPage.Title}}
-            </p>
-            <p class="book-describe">
+            </div>
+            <div class="book-describe">
                 {{ $bookPage.Params.describe}}
-            </p>
+            </div>
             <div class="book-meta">
-                <p>共{{ len $bookPage.Params.chapters}}章</p>
-                <p class="finish">{{ $bookPage.Params.finish}}</p>
+                <div>共{{ len $bookPage.Params.chapters}}章</div>
+                <div class="finish">{{ $bookPage.Params.finish}}</div>
             </div>
         </a>
         {{end}}

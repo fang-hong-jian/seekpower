@@ -150,6 +150,8 @@ a.book:hover {
 }
 
 .bookname {
+    margin-top: 22px;
+    margin-bottom: 22px;
     font-size: 22px;
     font-weight: 600;
 }
@@ -161,6 +163,8 @@ a.book:hover {
     border-bottom-style: solid;
     border-bottom-width: 1px;
     border-bottom-color: var(--border-color);
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
 
 /* 书籍卡的元数据 */

@@ -10,17 +10,17 @@
         {{/* 作者名和logo用横盒子 */}}
         <a href="{{ .URL}}" id="logo">
             <img src="{{ .Params.icon}}" />
-            <p id="{{.KeyName}}">
+            <div id="{{.KeyName}}">
                 {{ .Name }}
-            </p>
+            </div>
         </a>
         {{else}}
         {{/* 左侧每个菜单项用纵盒子，上面是图标 */}}
         <a href="{{ .URL}}" class="menus-left" id="{{ .Identifier }}">
             <img src="{{ .Params.icon}}" />
-            <p>
+            <div>
                 {{ .Name }}
-            </p>
+            </div>
         </a>
 
         {{end}}
