@@ -49,13 +49,13 @@ enableEmoji: true #启用emoji表情
 enableInlineShortcodes: true #启用内联短代码
 
 # 使markdown可以内嵌html
-markup:
-  goldmark:
-    extensions:
-      cjk:
+markup: # 配置markdown解析器
+  goldmark: # 配置Goldmark解析器
+    extensions: # 启用扩展
+      cjk: # CJK 扩展
         enable: true # 必须先启用 CJK 扩展
         eastAsianLineBreaks: true # 忽略东亚字符间的软换行
         eastAsianLineBreaksStyle: simple
         escapedSpace: false
-    renderer:
-      unsafe: true
+    renderer: # 配置渲染器
+      unsafe: true # 允许在markdown中使用html标签
