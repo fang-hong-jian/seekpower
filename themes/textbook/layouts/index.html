@@ -47,7 +47,7 @@
     {{/* 数学书 */}}
     <div class="books" id="mathbooks">
         {{/* 遍历数学书籍 */}}
-        {{range .Site.Data.booknames.book_name.math}}
+        {{range hugo.Data.booknames.book_name.math}}
         {{/* 将每本数学书对象定义为$mathbook */}}
         {{ $mathbook := . }}
         {{/* 获取书的主页对象，定义为$bookPage，使用 identifier 作为路径 */}}
@@ -70,7 +70,7 @@
 
     {{/* 遍历计算机书籍 */}}
     <div class="books" id="computerbooks">
-        {{range .Site.Data.booknames.book_name.computer}}
+        {{range hugo.Data.booknames.book_name.computer}}
         {{/* 用$menuItem表示每本书的对象 */}}
         {{ $computerbook := . }}
         {{/* 获取书的主页，使用 identifier 作为路径 */}}
@@ -92,7 +92,7 @@
 
     {{/* 遍历其他书 */}}
     <div class="books" id="otherbooks">
-        {{range .Site.Data.booknames.book_name.other}}
+        {{range hugo.Data.booknames.book_name.other}}
         {{/* 用$menuItem表示每本书的对象 */}}
         {{ $otherbook := . }}
         {{/* 获取书的主页，使用 identifier 作为路径 */}}
@@ -116,7 +116,7 @@
     {{/* 遍历全部书 */}}
     <div class="books active" id="allbooks">
         {{/* 遍历数学书籍 */}}
-        {{range .Site.Data.booknames.book_name.math}}
+        {{range hugo.Data.booknames.book_name.math}}
         {{/* 将每本数学书对象定义为$mathbook */}}
         {{ $mathbook := . }}
         {{/* 获取书的主页对象，定义为$bookPage，使用 identifier 作为路径 */}}
@@ -136,7 +136,7 @@
         </a>
         {{end}}
         {{/* 遍历计算机书籍 */}}
-        {{range .Site.Data.booknames.book_name.computer}}
+        {{range hugo.Data.booknames.book_name.computer}}
         {{/* 用$menuItem表示每本书的对象 */}}
         {{ $computerbook := . }}
         {{/* 获取书的主页，使用 identifier 作为路径 */}}
@@ -156,7 +156,7 @@
         {{end}}
 
         {{/* 遍历其他书 */}}
-        {{range .Site.Data.booknames.book_name.other}}
+        {{range hugo.Data.booknames.book_name.other}}
         {{/* 用$menuItem表示每本书的对象 */}}
         {{ $otherbook := . }}
         {{/* 获取书的主页，使用 identifier 作为路径 */}}

@@ -3,7 +3,7 @@
 {{ end }}
 
 {{ define "main" }}
-	<link rel="stylesheet" href="{{ "css/style-main.css" | relURL}}"/>
+<link rel="stylesheet" href="{{ "css/style-main.css" | relURL}}"/>
 <style>
     #home {
         background-color: var(--active-bgcolor);
