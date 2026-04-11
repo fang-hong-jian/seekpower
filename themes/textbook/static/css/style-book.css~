@@ -27,12 +27,12 @@ div.tocs {
     border-top: 1px solid #e0e0e0;
 }
 
-.book-meta > p {
+.book-meta>p {
     margin: 0px;
     padding-bottom: 8px;
 }
 
-.book-meta > p > span {
+.book-meta>p>span {
     font-family: "Inter";
     font-weight: 400;
     margin: 0px;
@@ -72,12 +72,14 @@ div.tocs {
     background: #e9ecef;
 }
 
+
 /* 正文区 */
 .book-content {
     flex: 1;
     padding: 40px;
     overflow-y: auto;
 }
+
 
 .book-title {
     font-size: 32px;
@@ -130,8 +132,7 @@ div.tocs {
     background: #f5f5f5;
     padding: 2px 6px;
     border-radius: 4px;
-    font-family:
-        "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
 }
 
 .chapter-body pre {
