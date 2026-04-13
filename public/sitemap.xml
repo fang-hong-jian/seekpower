@@ -2,7 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.seekpower.top/philosophy-of-mathematics/</loc>
+    <loc>https://www.seekpower.top/math/</loc>
+    <lastmod>2026-01-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.seekpower.top/math/philosophy-of-mathematics/</loc>
     <lastmod>2026-01-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.seekpower.top/message/</loc>
@@ -11,14 +14,20 @@
     <loc>https://www.seekpower.top/login/</loc>
     <lastmod>2026-01-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.seekpower.top/latex-tutorial/</loc>
+    <loc>https://www.seekpower.top/other/latex-tutorial/</loc>
     <lastmod>2026-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.seekpower.top/css-tutorial/</loc>
+    <loc>https://www.seekpower.top/computer/</loc>
+    <lastmod>2026-01-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.seekpower.top/computer/css-tutorial/</loc>
     <lastmod>2026-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.seekpower.top/html-tutorial/</loc>
+    <loc>https://www.seekpower.top/computer/html-tutorial/</loc>
     <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.seekpower.top/other/</loc>
+    <lastmod>2026-01-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.seekpower.top/about-me/</loc>
     <lastmod>2026-01-15T00:00:00+00:00</lastmod>
@@ -29,19 +38,19 @@
     <loc>https://www.seekpower.top/</loc>
     <lastmod>2026-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.seekpower.top/latex-tutorial/latex-introduction/</loc>
+    <loc>https://www.seekpower.top/other/latex-tutorial/latex-introduction/</loc>
     <lastmod>2026-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.seekpower.top/html-tutorial/html-history/</loc>
+    <loc>https://www.seekpower.top/computer/html-tutorial/html-history/</loc>
     <lastmod>2026-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.seekpower.top/html-tutorial/html-tags/</loc>
+    <loc>https://www.seekpower.top/computer/html-tutorial/html-tags/</loc>
     <lastmod>2026-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.seekpower.top/html-tutorial/html-introduction/</loc>
+    <loc>https://www.seekpower.top/computer/html-tutorial/html-introduction/</loc>
     <lastmod>2026-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.seekpower.top/latex-tutorial/latex-history/</loc>
+    <loc>https://www.seekpower.top/other/latex-tutorial/latex-history/</loc>
     <lastmod>2026-01-26T00:00:00+00:00</lastmod>
   </url>
 </urlset>
