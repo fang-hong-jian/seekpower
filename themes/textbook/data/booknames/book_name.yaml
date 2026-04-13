@@ -2,18 +2,18 @@
 # 注意每个identifier的值需要和每本book的支目录名相同
 - math:
     - id: math
-      childid: mathbooks
+      cardid: mathbooks
       books:
         - url: "/math/philosophy-of-mathematics"
         - url: "/math/basic-mathematical-logical"
 - computer:
     - id: computer
-      childid: computerbooks
+      cardid: computerbooks
       books:
         - url: "computer/css-tutorial"
         - url: "computer/html-tutorial"
 - other:
     - id: other
-      childid: otherbooks
+      cardid: otherbooks
       books:
         url: "other/latex-tutorial"

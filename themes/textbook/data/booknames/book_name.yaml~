@@ -16,4 +16,4 @@
     - id: other
       childid: otherbooks
       books:
-        books: "/icons/latex.png"
+        url: "other/latex-tutorial"
