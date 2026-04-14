@@ -89,6 +89,7 @@ div.display {
     background-color: var(--active-bgcolor);
     border-radius: 8px;
 }
+
 /* 悬停时科目导航按钮 */
 .subject:hover {
     background-color: var(--active-bgcolor);
@@ -103,11 +104,11 @@ div.display {
 
 /* 下方导航栏 */
 /* .allbooks {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    min-height: 500px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: flex-start;
+min-height: 500px;
 } */
 
 /* 陈列栏 */
@@ -121,10 +122,11 @@ div.display {
     padding-left: 40px;
 }
 
-.allbook {
+.allbooks {
     display: none;
 }
-.allbook.active {
+
+.allbooks.active {
     display: flex;
     flex-direction: column;
     color: inherit;
@@ -142,7 +144,7 @@ div.display {
     padding-bottom: 35px;
 }
 
-a.allbook:hover {
+a.allbooks:hover {
     transform: translateY(-4px);
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
 }

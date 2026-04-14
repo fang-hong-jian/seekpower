@@ -1,4 +1,3 @@
-// // 简单的内容加载器
 // // 将代码放在DOMContentLoaded事件中，确保DOM加载完成后再执行
 // document.addEventListener('DOMContentLoaded', function () {
 //     const tocLinks = document.querySelectorAll('.toc-link');

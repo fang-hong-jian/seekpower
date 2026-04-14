@@ -104,127 +104,126 @@
 	
 	<main>
 	    
-<link rel="stylesheet" href="/css/style-main.css" />
+<link rel="stylesheet" href=/css/style-main.css />
 <style>
-#home {
-    background-color: var(--active-bgcolor);
-    border-radius: 8px;
-}
+	#home {
+		background-color: var(--active-bgcolor);
+		border-radius: 8px;
+	}
 
 </style>
-<script src="/js/main.js"></script>
+<script src=/js/main.js></script>
 <div class="home-context">
-    <h1 class="young">年轻人,<br />
-	你渴望力量吗?
-    </h1>
-    <img src="/icons/home-right.png" class="home-right">
+	<h1 class="young">年轻人,<br />
+		你渴望力量吗?
+	</h1>
+	<img src="/icons/home-right.png" class="home-right">
 </div>
 
 
 <div class="books-display">
-    
-    
-    <div class="subjects">
-	
-	<button class="subject active" id="all">
-	    <img src="/icons/all.png"> <span>全部</span>
-	</button>
 	
 	
+	<div class="subjects">
+		
+		<button class="subject active" id="all">
+			<img src="/icons/all.png"> <span>全部</span>
+		</button>
+		
+		
+		
+		<button class="subject" id="math">
+			<img src="icons/mathbooks.png"><span>数学</span>
+		</button>
+		
+		<button class="subject" id="computer">
+			<img src="icons/computerbooks.png"><span>计算机</span>
+		</button>
+		
+		<button class="subject" id="other">
+			<img src="icons/otherbooks.png"><span>其他</span>
+		</button>
+		
+	</div>
 	
-	<button class="subject" id="math">
-	    <img src="icons/mathbooks.png" ><span>数学</span>
-	</button>
-	
-	<button class="subject" id="computer">
-	    <img src="icons/computerbooks.png" ><span>计算机</span>
-	</button>
-	
-	<button class="subject" id="other">
-	    <img src="icons/otherbooks.png" ><span>其他</span>
-	</button>
-	
-    </div>
-    
-    <div class="books">
-	
-	
-	
-	
-	<a class="allbook active " href="math/philosophy-of-mathematics">
-	    <div class="bookname">
-		数学及数学哲学的历史
-	    </div>
-	    <div class="book-describe">
-		这是《数学及数学哲学的历史》的描述，仅用于测试
-	    </div>
-	    <div class="book-meta">
-		<div> 共3章 </div>
-		<div class="finish">
-		    连载中
-		</div>
-	    </div>
-	</a>
-	
-	
-	<a class="allbook active " href="math/basic-mathematical-logic">
-	    <div class="bookname">
-		数理逻辑基础
-	    </div>
-	    <div class="book-describe">
-		这是《数理逻辑》的描述，仅用于测试
-	    </div>
-	    <div class="book-meta">
-		<div> 共3章 </div>
-		<div class="finish">
-		    连载中
-		</div>
-	    </div>
-	</a>
-	
-	
-	
-	
-	
-	<a class="allbook active " href="computer/html-tutorial">
-	    <div class="bookname">
-		HTML教程
-	    </div>
-	    <div class="book-describe">
-		HTML一种标记语言。通过一系列标签可以将网络上的文档格式统一，使分散的Internet资源连接为一个逻辑整体，前端必备。
-	    </div>
-	    <div class="book-meta">
-		<div> 共3章 </div>
-		<div class="finish">
-		    连载中
-		</div>
-	    </div>
-	</a>
-	
-	
-	
-	
-	
-	<a class="allbook active " href="other/latex-tutorial">
-	    <div class="bookname">
-		$\LaTeX$教程
-	    </div>
-	    <div class="book-describe">
-		$\LaTeX$一种标记语言。用于排版。
-	    </div>
-	    <div class="book-meta">
-		<div> 共2章 </div>
-		<div class="finish">
-		    连载中
-		</div>
-	    </div>
-	</a>
-	
-	
-    </div>
+	<div class="books">
+		
+		
+		
+		
+		<a class="allbooks active mathbooks" href="math/philosophy-of-mathematics">
+			<div class="bookname">
+				数学及数学哲学的历史
+			</div>
+			<div class="book-describe">
+				这是《数学及数学哲学的历史》的描述，仅用于测试
+			</div>
+			<div class="book-meta">
+				<div> 共3章 </div>
+				<div class="finish">
+					连载中
+				</div>
+			</div>
+		</a>
+		
+		
+		<a class="allbooks active mathbooks" href="math/basic-mathematical-logic">
+			<div class="bookname">
+				数理逻辑基础
+			</div>
+			<div class="book-describe">
+				这是《数理逻辑》的描述，仅用于测试
+			</div>
+			<div class="book-meta">
+				<div> 共3章 </div>
+				<div class="finish">
+					连载中
+				</div>
+			</div>
+		</a>
+		
+		
+		
+		
+		
+		<a class="allbooks active computerbooks" href="computer/html-tutorial">
+			<div class="bookname">
+				HTML教程
+			</div>
+			<div class="book-describe">
+				HTML一种标记语言。通过一系列标签可以将网络上的文档格式统一，使分散的Internet资源连接为一个逻辑整体，前端必备。
+			</div>
+			<div class="book-meta">
+				<div> 共3章 </div>
+				<div class="finish">
+					连载中
+				</div>
+			</div>
+		</a>
+		
+		
+		
+		
+		
+		<a class="allbooks active otherbooks" href="other/latex-tutorial">
+			<div class="bookname">
+				$\LaTeX$教程
+			</div>
+			<div class="book-describe">
+				$\LaTeX$一种标记语言。用于排版。
+			</div>
+			<div class="book-meta">
+				<div> 共2章 </div>
+				<div class="finish">
+					连载中
+				</div>
+			</div>
+		</a>
+		
+		
+	</div>
 
 </div>
-
 
 
 

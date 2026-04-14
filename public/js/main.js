@@ -18,21 +18,17 @@ globalThis.addEventListener('DOMContentLoaded', () => {
 			// 给当前点击的按钮添加active类
 			this.classList.add('active');
 
-			// 隐藏所有书籍列表
-			for (const bookList of document.querySelectorAll('.books')) {
+			// 取消所有书籍列表的active类
+			for (const bookList of document.querySelectorAll('.allbooks')) {
 				bookList.classList.remove('active');
 			}
 
 			// 根据按钮id构建对应的书籍列表id
 			// 例如：按钮id="math" -> 书籍列表id="mathbooks"
-			const bookListId = buttonId + 'books';
-			const targetBookList = document.getElementById(bookListId);
-
-			if (targetBookList) {
-				targetBookList.classList.add('active');
-				console.log('显示了书籍列表：', bookListId);
-			} else {
-				console.log('找不到对应的书籍列表：', bookListId);
+			const bookListClass = '.' + buttonId + 'books';
+			const targetBookList = document.querySelectorAll(bookListClass);
+			for (const book of targetBookList) {
+				book.classList.add('active');
 			}
 		});
 	}
