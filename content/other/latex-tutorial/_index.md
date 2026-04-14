@@ -1,5 +1,5 @@
 ---
-title: "$\LaTeX$教程"
+title: $\LaTeX$教程
 publishDate: 2026-01-15
 lastmod: 2026-04-10
 type: page
