@@ -125,8 +125,7 @@ div.display {
     display: none;
 }
 .allbook.active {
-    display: flex;
-    flex-direction: column;
+    display: block;
     color: inherit;
     text-decoration: none;
     width: 280px;

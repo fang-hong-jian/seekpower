@@ -13,7 +13,6 @@
     border-bottom-color: var(--border-color);
 }
 
-
 /* 主页标题字 */
 .young {
     width: 600px;
@@ -102,8 +101,6 @@ div.display {
     transform: scale(0.98);
 }
 
-
-
 /* 下方导航栏 */
 /* .allbooks {
     display: flex;
@@ -113,13 +110,9 @@ div.display {
     min-height: 500px;
 } */
 
-
 /* 陈列栏 */
-.books {
-    display: none;
-}
 
-.books.active {
+.books {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -128,7 +121,12 @@ div.display {
     padding-left: 40px;
 }
 
-a.book {
+.allbook {
+    display: none;
+}
+.allbook.active {
+    display: flex;
+    flex-direction: column;
     color: inherit;
     text-decoration: none;
     width: 280px;
@@ -144,7 +142,7 @@ a.book {
     padding-bottom: 35px;
 }
 
-a.book:hover {
+a.allbook:hover {
     transform: translateY(-4px);
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
 }

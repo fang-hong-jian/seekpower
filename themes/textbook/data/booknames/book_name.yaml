@@ -1,19 +1,21 @@
 # 数学书导航
 # 注意每个identifier的值需要和每本book的支目录名相同
-- math:
-    - id: math
-      cardid: mathbooks
-      books:
-        - url: "/math/philosophy-of-mathematics"
-        - url: "/math/basic-mathematical-logical"
-- computer:
-    - id: computer
-      cardid: computerbooks
-      books:
-        - url: "computer/css-tutorial"
-        - url: "computer/html-tutorial"
-- other:
-    - id: other
-      cardid: otherbooks
-      books:
-        url: "other/latex-tutorial"
+- id: math
+  name: "数学"
+  cardclass: mathbooks
+  icon: "/icons/mathbooks.png"
+  books:
+    - url: "math/philosophy-of-mathematics"
+    - url: "math/basic-mathematical-logic"
+- id: computer
+  name: "计算机"
+  cardclass: computerbooks
+  icon: "/icons/computerbooks.png"
+  books:
+    - url: "computer/html-tutorial"
+- id: other
+  name: "其他"
+  cardclass: otherbooks
+  icon: "/icon/otherbooks.png"
+  books:
+    - url: "other/latex-tutorial"
