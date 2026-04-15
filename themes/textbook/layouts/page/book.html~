@@ -32,7 +32,8 @@
 		{{ $u := . }}
 		{{ with $page.GetPage . }}
 		<li class="toc-item">
-			<a href="{{ $u }}" class="toc-link" data-type="chapter">
+			<a href="{{ relref . $u }}" class="toc-link" data-type="chapter">
+				{{ relref . $u }}
 				{{ .Title }}
 			</a>
 		</li>
