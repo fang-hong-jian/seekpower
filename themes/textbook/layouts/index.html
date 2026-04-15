@@ -29,6 +29,7 @@
 		<button class="subject active" id="all">
 			<img src="/icons/all.png"> <span>全部</span>
 		</button>
+
 		{{/*提取book_name文件，赋值给$subjects变量 */}}
 		{{ $subjects := hugo.Data.booknames.book_name }}
 		{{ range $subjects }}

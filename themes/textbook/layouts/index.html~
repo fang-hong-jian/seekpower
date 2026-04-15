@@ -29,6 +29,7 @@
 		<button class="subject active" id="all">
 			<img src="/icons/all.png"> <span>全部</span>
 		</button>
+
 		{{/*提取book_name文件，赋值给$subjects变量 */}}
 		{{ $subjects := hugo.Data.booknames.book_name }}
 		{{ range $subjects }}
@@ -45,7 +46,7 @@
 		{{ $book := site.GetPage .url }}
 		<a class="allbooks active {{ $subject.cardclass }}" href="{{ .url }}">
 			<div class="bookname">
-				{{ $book.Title }}
+				{{ $book.Params.bookname }}
 			</div>
 			<div class="book-describe">
 				{{ $book.Params.describe}}

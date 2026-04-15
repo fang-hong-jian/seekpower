@@ -2,73 +2,73 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.seekpower.top/math/</loc>
+    <loc>http://localhost:1313/math/</loc>
     <lastmod>2026-04-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.seekpower.top/math/basic-mathematical-logic/aristotle/</loc>
+    <loc>http://localhost:1313/math/basic-mathematical-logic/aristotle/</loc>
     <lastmod>2026-04-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.seekpower.top/math/philosophy-of-mathematics/aristotle/</loc>
+    <loc>http://localhost:1313/math/philosophy-of-mathematics/aristotle/</loc>
     <lastmod>2026-04-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.seekpower.top/math/basic-mathematical-logic/frege/</loc>
+    <loc>http://localhost:1313/math/basic-mathematical-logic/frege/</loc>
     <lastmod>2026-04-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.seekpower.top/math/philosophy-of-mathematics/plato/</loc>
+    <loc>http://localhost:1313/math/philosophy-of-mathematics/plato/</loc>
     <lastmod>2026-04-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.seekpower.top/math/philosophy-of-mathematics/thales/</loc>
+    <loc>http://localhost:1313/math/philosophy-of-mathematics/thales/</loc>
     <lastmod>2026-04-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.seekpower.top/math/basic-mathematical-logic/russell/</loc>
+    <loc>http://localhost:1313/math/basic-mathematical-logic/russell/</loc>
     <lastmod>2026-04-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.seekpower.top/math/philosophy-of-mathematics/</loc>
+    <loc>http://localhost:1313/math/philosophy-of-mathematics/</loc>
     <lastmod>2026-04-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.seekpower.top/math/basic-mathematical-logic/</loc>
+    <loc>http://localhost:1313/math/basic-mathematical-logic/</loc>
     <lastmod>2026-04-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.seekpower.top/message/</loc>
+    <loc>http://localhost:1313/message/</loc>
     <lastmod>2026-01-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.seekpower.top/login/</loc>
+    <loc>http://localhost:1313/login/</loc>
     <lastmod>2026-01-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.seekpower.top/computer/</loc>
+    <loc>http://localhost:1313/computer/</loc>
     <lastmod>2026-04-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.seekpower.top/other/</loc>
+    <loc>http://localhost:1313/other/</loc>
     <lastmod>2026-04-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.seekpower.top/about-me/</loc>
+    <loc>http://localhost:1313/about-me/</loc>
     <lastmod>2026-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.seekpower.top/about-site/</loc>
+    <loc>http://localhost:1313/about-site/</loc>
     <lastmod>2026-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.seekpower.top/computer/html-tutorial/</loc>
+    <loc>http://localhost:1313/computer/html-tutorial/</loc>
     <lastmod>2026-04-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.seekpower.top/other/latex-tutorial/</loc>
+    <loc>http://localhost:1313/other/latex-tutorial/</loc>
     <lastmod>2026-04-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.seekpower.top/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2026-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.seekpower.top/other/latex-tutorial/latex-history/</loc>
+    <loc>http://localhost:1313/other/latex-tutorial/latex-history/</loc>
     <lastmod>2026-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.seekpower.top/other/latex-tutorial/latex-introduction/</loc>
+    <loc>http://localhost:1313/other/latex-tutorial/latex-introduction/</loc>
     <lastmod>2026-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.seekpower.top/computer/html-tutorial/html-history/</loc>
+    <loc>http://localhost:1313/computer/html-tutorial/html-history/</loc>
     <lastmod>2026-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.seekpower.top/computer/html-tutorial/html-tags/</loc>
+    <loc>http://localhost:1313/computer/html-tutorial/html-tags/</loc>
     <lastmod>2026-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.seekpower.top/computer/html-tutorial/html-introduction/</loc>
+    <loc>http://localhost:1313/computer/html-tutorial/html-introduction/</loc>
     <lastmod>2026-01-26T00:00:00+00:00</lastmod>
   </url>
 </urlset>
