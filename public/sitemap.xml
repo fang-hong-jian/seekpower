@@ -35,13 +35,7 @@
     <loc>https://www.seekpower.top/login/</loc>
     <lastmod>2026-01-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.seekpower.top/other/latex-tutorial/</loc>
-    <lastmod>2026-04-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.seekpower.top/computer/</loc>
-    <lastmod>2026-04-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.seekpower.top/computer/html-tutorial/</loc>
     <lastmod>2026-04-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.seekpower.top/other/</loc>
@@ -53,8 +47,17 @@
     <loc>https://www.seekpower.top/about-site/</loc>
     <lastmod>2026-01-15T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://www.seekpower.top/computer/html-tutorial/</loc>
+    <lastmod>2026-04-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.seekpower.top/other/latex-tutorial/</loc>
+    <lastmod>2026-04-10T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.seekpower.top/</loc>
     <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.seekpower.top/other/latex-tutorial/latex-history/</loc>
+    <lastmod>2026-01-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.seekpower.top/other/latex-tutorial/latex-introduction/</loc>
     <lastmod>2026-01-26T00:00:00+00:00</lastmod>
@@ -66,9 +69,6 @@
     <lastmod>2026-01-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.seekpower.top/computer/html-tutorial/html-introduction/</loc>
-    <lastmod>2026-01-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.seekpower.top/other/latex-tutorial/latex-history/</loc>
     <lastmod>2026-01-26T00:00:00+00:00</lastmod>
   </url>
 </urlset>

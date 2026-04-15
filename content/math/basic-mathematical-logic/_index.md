@@ -1,5 +1,6 @@
 ---
-title: "数理逻辑基础"
+bookname: "数理逻辑基础"
+title: 前言
 publishDate: 2026-02-14
 lastmod: 2026-04-13
 type: page

@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>$\LaTeX$教程 on 年轻人，你渴望力量吗？</title>
+    <title>前言 on 年轻人，你渴望力量吗？</title>
     <link>https://www.seekpower.top/other/latex-tutorial/</link>
-    <description>Recent content in $\LaTeX$教程 on 年轻人，你渴望力量吗？</description>
+    <description>Recent content in 前言 on 年轻人，你渴望力量吗？</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 26 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.seekpower.top/other/latex-tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>$\LaTeX$历史</title>
+      <link>https://www.seekpower.top/other/latex-tutorial/latex-history/</link>
+      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://www.seekpower.top/other/latex-tutorial/latex-history/</guid>
+      <description>&lt;p&gt;什么是LaTeX?&lt;/p&gt;</description>
+    </item>
     <item>
       <title>$\LaTeX$简介</title>
       <link>https://www.seekpower.top/other/latex-tutorial/latex-introduction/</link>
       <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
       <guid>https://www.seekpower.top/other/latex-tutorial/latex-introduction/</guid>
       <description>&lt;p&gt;什么是$\LaTeX$?&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;img/latex.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;\frac{1}{2}&#xA;$$&lt;/p&gt;&#xA;&lt;p&gt;勾股定理可以表示为 $a^2 + b^2 = c^2$，其中 $c$ 是斜边。&lt;/p&gt;&#xA;&lt;p&gt;二次方程的求根公式为：&#xA;$$&#xA;x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}&#xA;$$&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>LaTeX简介</title>
-      <link>https://www.seekpower.top/other/latex-tutorial/latex-history/</link>
-      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://www.seekpower.top/other/latex-tutorial/latex-history/</guid>
-      <description>&lt;p&gt;什么是LaTeX?&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

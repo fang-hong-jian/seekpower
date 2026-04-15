@@ -1,5 +1,6 @@
 ---
-title: "数学及数学哲学的历史"
+bookname: "数学及数学哲学的历史"
+title: 前言
 publishDate: 2026-03-26
 lastmod: 2026-04-13
 type: page

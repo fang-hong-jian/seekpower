@@ -19,6 +19,7 @@
 	<img src="/icons/home-right.png" class="home-right">
 </div>
 
+
 {{/* 书籍陈列栏*/}}
 <div class="books-display">
 	{{/*遍历科目*/}}
@@ -44,7 +45,7 @@
 		{{ $book := site.GetPage .url }}
 		<a class="allbooks active {{ $subject.cardclass }}" href="{{ .url }}">
 			<div class="bookname">
-				{{ $book.Title }}
+				{{ $book.Params.bookname }}
 			</div>
 			<div class="book-describe">
 				{{ $book.Params.describe}}

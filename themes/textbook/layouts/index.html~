@@ -5,60 +5,61 @@
 {{ define "main" }}
 <link rel="stylesheet" href={{"css/style-main.css"| relURL}} />
 <style>
-#home {
-    background-color: var(--active-bgcolor);
-    border-radius: 8px;
-}
+	#home {
+		background-color: var(--active-bgcolor);
+		border-radius: 8px;
+	}
 
 </style>
 <script src={{"js/main.js"| relURL}}></script>
 <div class="home-context">
-    <h1 class="young">年轻人,<br />
-	你渴望力量吗?
-    </h1>
-    <img src="/icons/home-right.png" class="home-right">
+	<h1 class="young">年轻人,<br />
+		你渴望力量吗?
+	</h1>
+	<img src="/icons/home-right.png" class="home-right">
 </div>
+
 
 {{/* 书籍陈列栏*/}}
 <div class="books-display">
-    {{/*遍历科目*/}}
-    {{/* 科目栏 */}}
-    <div class="subjects">
-	{{/* 全部科目 */}}
-	<button class="subject active" id="all">
-	    <img src="/icons/all.png"> <span>全部</span>
-	</button>
-	{{/*提取book_name文件，赋值给$subjects变量 */}}
-	{{ $subjects := hugo.Data.booknames.book_name }}
-	{{ range $subjects }}
-	<button class="subject" id="{{ .id }}">
-	    <img src="{{ .icon }}"><span>{{ .name }}</span>
-	</button>
-	{{ end }}
-    </div>
-    {{/* 书籍卡容器 */}}
-    <div class="books">
-	{{ range $subjects }}
-	{{ $subject := . }}
-	{{ range $subject.books }}
-	{{ $book := site.GetPage .url }}
-	<a class="allbooks active {{ $subject.cardclass }}" href="{{ .url }}">
-	    <div class="bookname">
-		{{ $book.Title }}
-	    </div>
-	    <div class="book-describe">
-		{{ $book.Params.describe}}
-	    </div>
-	    <div class="book-meta">
-		<div> 共{{ len $book.Params.chapters }}章 </div>
-		<div class="finish">
-		    {{ $book.Params.finish }}
-		</div>
-	    </div>
-	</a>
-	{{ end }}
-	{{ end }}
-    </div>
+	{{/*遍历科目*/}}
+	{{/* 科目栏 */}}
+	<div class="subjects">
+		{{/* 全部科目 */}}
+		<button class="subject active" id="all">
+			<img src="/icons/all.png"> <span>全部</span>
+		</button>
+		{{/*提取book_name文件，赋值给$subjects变量 */}}
+		{{ $subjects := hugo.Data.booknames.book_name }}
+		{{ range $subjects }}
+		<button class="subject" id="{{ .id }}">
+			<img src="{{ .icon }}"><span>{{ .name }}</span>
+		</button>
+		{{ end }}
+	</div>
+	{{/* 书籍卡容器 */}}
+	<div class="books">
+		{{ range $subjects }}
+		{{ $subject := . }}
+		{{ range $subject.books }}
+		{{ $book := site.GetPage .url }}
+		<a class="allbooks active {{ $subject.cardclass }}" href="{{ .url }}">
+			<div class="bookname">
+				{{ $book.Title }}
+			</div>
+			<div class="book-describe">
+				{{ $book.Params.describe}}
+			</div>
+			<div class="book-meta">
+				<div> 共{{ len $book.Params.chapters }}章 </div>
+				<div class="finish">
+					{{ $book.Params.finish }}
+				</div>
+			</div>
+		</a>
+		{{ end }}
+		{{ end }}
+	</div>
 
 </div>
 <!-- .Content 会渲染 content/_index.md 文件中的Markdown内容 -->

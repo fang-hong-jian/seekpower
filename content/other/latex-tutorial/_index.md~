@@ -1,10 +1,11 @@
 ---
 title: $\LaTeX$教程
-date: 2026-01-15
+publishDate: 2026-01-15
+lastmod: 2026-04-10
 type: page
 layout: book
 author: 方鸿渐
-finish: 连载中
+finish: 空
 chapters:
     - latex-introduction
     - latex-history
