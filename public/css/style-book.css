@@ -18,6 +18,13 @@ div.tocs {
 	flex-shrink: 0;
 }
 
+/*书名*/
+p.bookname {
+	font-size: 24px;
+	font-weight: 700;
+	padding-left: 32px;
+}
+
 /* 目录区 */
 .toc-header {
 	padding-left: 32px;
@@ -70,6 +77,16 @@ div.tocs {
 
 .toc-link.active {
 	background: #e9ecef;
+}
+
+.section-2 {
+	font-size: 16px;
+	margin-left: 5px;
+}
+
+.section-3 {
+	padding-left: 5px;
+	margin-left: 5px;
 }
 
 /* 正文区 */

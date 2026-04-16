@@ -14,7 +14,7 @@
 	<div class="toc-header">
 		<div class="toc-title">目录</div>
 		<div class="book-meta">
-			<p><span>共 {{ len .Params.chapters}}章</span><span>作者:{{ .Page.Params.author}}</span></p>
+			<p><span>共 {{ len .Params.chapters}}章</span><span>作者: {{ .Page.Params.author}}</span></p>
 		</div>
 	</div>
 
@@ -27,16 +27,28 @@
 		</li>
 
 		<!-- 各章节链接 -->
+		{{/* 将$page定义为当前主页 */}}
 		{{ $page := . }}
+		{{/* 遍历书籍主页的chapters项的数组 */}}
 		{{ range .Params.chapters }}
+		{{/* 用$u表示当前数组，也就是单个章的目录名称 */}}
 		{{ $u := . }}
 		{{ with $page.GetPage . }}
-		<li class="toc-item">
+		<!-- 将$thechapte定义为当前章对象-->
+		{{ $thechapter := . }}
+		<div class="toc-item">
 			<a href="{{ relref . $u }}" class="toc-link" data-type="chapter">
 				{{/* 遍历文件标题 */}}
 				{{ .Title }}
 			</a>
-		</li>
+			<div class="subsection">
+				{{ range .Fragments.HeadingsMap }}
+				<a href="{{ relref $thechapter $u }}#{{ .ID }}" class="section-{{ .Level }}">
+					{{ .Title }}
+				</a>
+				{{ end }}
+			</div>
+		</div>
 		{{ end }}
 		{{ end }}
 	</ul>
@@ -45,6 +57,7 @@
 {{/* 正文区 */}}
 <article class="book-content">
 	<div id="book-intro">
+		<h1>{{ .Title }}</h1>
 		<div class="book-description">
 			{{ .Content }}
 		</div>

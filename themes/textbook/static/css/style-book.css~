@@ -1,7 +1,7 @@
 /* 书籍主页模板 */
 main {
 	display: flex;
-	margin-top: 150px;
+	margin-top: 60px;
 	min-height: 85vh;
 }
 
@@ -11,11 +11,18 @@ div.tocs {
 	flex-direction: column;
 	width: 300px;
 	border-right: 1px solid #e0e0e0;
-	padding-top: 230px;
+	padding-top: 30px;
 	/* y向溢出 */
 	overflow-y: auto;
 	/* 收缩 */
 	flex-shrink: 0;
+}
+
+/*书名*/
+p.bookname {
+	font-size: 24px;
+	font-weight: 700;
+	padding-left: 32px;
 }
 
 /* 目录区 */
@@ -50,6 +57,8 @@ div.tocs {
 }
 
 .toc-item {
+	display: flex;
+	flex-direction: column;
 	margin-bottom: 8px;
 }
 
@@ -70,6 +79,16 @@ div.tocs {
 
 .toc-link.active {
 	background: #e9ecef;
+}
+
+.section-2 {
+	font-size: 16px;
+	margin-left: 5px;
+}
+
+.section-3 {
+	padding-left: 5px;
+	margin-left: 5px;
 }
 
 /* 正文区 */
