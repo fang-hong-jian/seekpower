@@ -18,6 +18,9 @@
 	</h1>
 	<img src="/icons/home-right.png" class="home-right">
 </div>
+<p id="test">
+	label
+</p>
 
 
 {{/* 书籍陈列栏*/}}
@@ -63,6 +66,7 @@
 	</div>
 
 </div>
+<a href="#test" target="_self">Anchor Text</a>
 <!-- .Content 会渲染 content/_index.md 文件中的Markdown内容 -->
 {{ .Content }}
 {{ end }}

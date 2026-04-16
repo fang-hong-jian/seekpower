@@ -1,5 +1,6 @@
 ---
-title: "数学及数学哲学的历史"
+bookname: "数学及数学哲学的历史"
+title: 前言
 publishDate: 2026-03-26
 lastmod: 2026-04-13
 type: page
@@ -12,5 +13,7 @@ chapters:
     - Aristotle
 describe: 这是《数学及数学哲学的历史》的描述，仅用于测试
 ---
+
+# 前言
 
 这里是数学及数学哲学的历史书籍主页的正文。

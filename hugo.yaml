@@ -48,7 +48,6 @@ cleanDestinationDir: true #每次生成前清空public目录
 enableEmoji: true #启用emoji表情
 enableInlineShortcodes: true #启用内联短代码
 
-# 使markdown可以内嵌html
 markup: # 配置markdown解析器
   goldmark: # 配置Goldmark解析器
     extensions: # 启用扩展

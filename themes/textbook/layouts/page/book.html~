@@ -33,11 +33,8 @@
 		{{ with $page.GetPage . }}
 		<li class="toc-item">
 			<a href="{{ relref . $u }}" class="toc-link" data-type="chapter">
+				{{/* 遍历文件标题 */}}
 				{{ .Title }}
-				{{ range .Fragments.Headings }}
-
-				{{ .ID }}- {{ .Title }}
-				{{ end }}
 			</a>
 		</li>
 		{{ end }}
@@ -48,7 +45,6 @@
 {{/* 正文区 */}}
 <article class="book-content">
 	<div id="book-intro">
-		<h1 class="book-title">{{ .Title }}</h1>
 		<div class="book-description">
 			{{ .Content }}
 		</div>
