@@ -14,6 +14,10 @@
 
 </style>
 {{/* 文档元数据 */}}
+
+<nav class="page-path">
+
+</nav>
 <div>
 	{{/* article.book-content */}}
 	<article class="book-content">
@@ -25,7 +29,6 @@
 		</div>
 		{{/* md文件内容 */}}
 		<div class="chapter-content">
-			{{ .TableOfContents }}
 			{{ .Content }}
 		</div>
 	</article>

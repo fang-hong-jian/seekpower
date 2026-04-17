@@ -14,6 +14,10 @@ chapters:
 describe: 这是《数学及数学哲学的历史》的描述，仅用于测试
 ---
 
-# 前言
+<style>
+	header {
+		background-color: red;
+	}
+</style>
 
 这里是数学及数学哲学的历史书籍主页的正文。

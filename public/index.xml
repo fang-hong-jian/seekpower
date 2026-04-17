@@ -69,14 +69,14 @@
       <link>https://www.seekpower.top/about-me/</link>
       <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://www.seekpower.top/about-me/</guid>
-      <description>&lt;style&gt;&#xD;&#xA;    #about-me {&#xD;&#xA;        background-color: var(--active-bgcolor);&#xD;&#xA;        border-radius: 8px;&#xD;&#xA;}&#xD;&#xA;&lt;/style&gt;&#xD;&#xA;&lt;p&gt;资质愚钝的大龄散修，兴趣使然的学生。&lt;/p&gt;</description>
+      <description>&lt;style&gt;&#xD;&#xA;#about-me {&#xD;&#xA;&#x9;&#x9;background-color: var(--active-bgcolor);&#xD;&#xA;&#x9;&#x9;border-radius: 8px;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/style&gt;&#xD;&#xA;&lt;p&gt;资质愚钝的大龄散修，兴趣使然的学生。&lt;/p&gt;</description>
     </item>
     <item>
       <title>关于本站</title>
       <link>https://www.seekpower.top/about-site/</link>
       <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://www.seekpower.top/about-site/</guid>
-      <description>&lt;style&gt;&#xD;&#xA;    #about-site {&#xD;&#xA;        background-color: var(--active-bgcolor);&#xD;&#xA;        border-radius: 8px;&#xD;&#xA;}&#xD;&#xA;&lt;/style&gt;&#xD;&#xA;&lt;p&gt;本站&lt;/p&gt;</description>
+      <description>&lt;style&gt;&#xD;&#xA;#about-site {&#xD;&#xA;&#x9;&#x9;background-color: var(--active-bgcolor);&#xD;&#xA;&#x9;&#x9;border-radius: 8px;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/style&gt;&#xD;&#xA;&lt;p&gt;本站&lt;/p&gt;</description>
     </item>
     <item>
       <title>$\LaTeX$历史</title>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default " zh-cn" }}">
+<html lang={{ .Site.LanguageCode | default "zh-cn" }}>
 
 <head>
 	<meta charset="UTF-8">
@@ -7,6 +7,7 @@
 	{{/* 标题 */}}
 	<title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
 	<link rel="stylesheet" href={{ "css/style-baseof.css" | relURL}} />
+	<link rel="stylesheet" href={{"css/style-header.css"| relURL}} />
 	<link rel="shortcut icon" href={{ "icons/logo.png" | relURL}} type="image/x-icon" />
 	<script>
 		MathJax = {

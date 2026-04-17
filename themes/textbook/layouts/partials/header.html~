@@ -1,0 +1,37 @@
+<header id="homeheader">
+	<nav class="left" aria-label="主导航">
+		<!-- 循环遍历在 hugo.yaml 中定义的 “main” 菜单 -->
+		{{ range site.Menus.main }}
+		{{/* 判断是不是作者名 */}}
+		{{if eq .Identifier "author"}}
+
+		{{/* 作者名和logo用横盒子 */}}
+		<a href="{{ .URL}}" id="logo">
+			<img src="{{ .Params.icon}}" />
+			<div id="{{.KeyName}}">
+				{{ .Name }}
+			</div>
+		</a>
+		{{else}}
+		{{/* 左侧每个菜单项用纵盒子，上面是图标 */}}
+		<a href="{{ .URL}}" class="menus-left" id="{{ .Identifier }}">
+			<img src="{{ .Params.icon}}" />
+			<div>
+				{{ .Name }}
+			</div>
+		</a>
+
+		{{end}}
+
+		{{ end }}
+	</nav>
+	{{/* 右侧导航目前只有文字 */}}
+	<nav class="right" aria-label="副导航">
+		<!-- 循环遍历在 hugo.yaml 中定义的 “second” 菜单 -->
+		{{ range site.Menus.second }}
+		<a href="{{ .URL}}" id="{{.KeyName}}">
+			{{ .Name }}
+		</a>
+		{{ end }}
+	</nav>
+</header>

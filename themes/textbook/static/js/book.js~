@@ -5,7 +5,7 @@
 //     const chapterContainer = document.getElementById('chapter-container');
 //     const bookIntro = document.getElementById('book-intro');
 
-//      为每个目录链接添加点击事件
+//     为每个目录链接添加点击事件
 //     tocLinks.forEach(link => {
 //         link.addEventListener('click', function (e) {
 //             e.preventDefault();

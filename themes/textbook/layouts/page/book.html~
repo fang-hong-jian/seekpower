@@ -4,66 +4,79 @@
 
 {{/* 书籍主页 */}}
 {{define "main"}}
-<link rel="stylesheet" href={{"css/style-book.css"| relURL}} />
-<script src={{"js/book.js"| relURL}}></script>
-{{/* 侧边栏区 */}}
-{{/* 目录 */}}
-<div class="tocs">
-	{{/* 书名 */}}
-	<p class="bookname">{{ .Params.bookname }}</p>
-	<div class="toc-header">
-		<div class="toc-title">目录</div>
-		<div class="book-meta">
-			<p><span>共 {{ len .Params.chapters}}章</span><span>作者: {{ .Page.Params.author}}</span></p>
-		</div>
-	</div>
+{{/* 页面路径导航 */}}
+<nav class="page-path">
+	<!--首页 -->
+	<a class="home-page-path path" href={{absURL "" }}>
+		首页
+	</a>
+	<span class="arrow"></span>
+	<a class="book-page-path path" href="{{ .Permalink }}">{{ .Params.bookname }}</a>
+</nav>
+<div>
 
-	<ul class="toc-list">
-		<!-- 书籍简介链接 -->
-		<li class="toc-item">
-			<a href="#book-intro" class="toc-link" data-url="{{ .Permalink }}" data-type="book">
-				前言
-			</a>
-		</li>
+	<link rel="stylesheet" href={{"css/style-book.css"| relURL}} />
+	<script src={{"js/book.js"| relURL}}></script>
+	{{/* 侧边栏区 */}}
+	{{/* 目录 */}}
+	<div class="tocs">
+		<div class="toc-header">
+			<div class="toc-title">目录</div>
+			<div class="book-meta">
+				<div>
+					共 {{ len .Params.chapters}}章 作者: {{ .Page.Params.author}}
 
-		<!-- 各章节链接 -->
-		{{/* 将$page定义为当前主页 */}}
-		{{ $page := . }}
-		{{/* 遍历书籍主页的chapters项的数组 */}}
-		{{ range .Params.chapters }}
-		{{/* 用$u表示当前数组，也就是单个章的目录名称 */}}
-		{{ $u := . }}
-		{{ with $page.GetPage . }}
-		<!-- 将$thechapte定义为当前章对象-->
-		{{ $thechapter := . }}
-		<div class="toc-item">
-			<a href="{{ relref . $u }}" class="toc-link" data-type="chapter">
-				{{/* 遍历文件标题 */}}
-				{{ .Title }}
-			</a>
-			<div class="subsection">
-				{{ range .Fragments.HeadingsMap }}
-				<a href="{{ relref $thechapter $u }}#{{ .ID }}" class="section-{{ .Level }}">
-					{{ .Title }}
-				</a>
-				{{ end }}
+				</div>
 			</div>
 		</div>
-		{{ end }}
-		{{ end }}
-	</ul>
-</div>
 
-{{/* 正文区 */}}
-<article class="book-content">
-	<div id="book-intro">
-		<h1>{{ .Title }}</h1>
-		<div class="book-description">
-			{{ .Content }}
-		</div>
+		<ul class="toc-list">
+			<!-- 书籍简介链接 -->
+			<li class="toc-item">
+				<a href="#book-intro" class="toc-link" data-url="{{ .Permalink }}" data-type="book">
+					前言
+				</a>
+			</li>
+
+			<!-- 各章节链接 -->
+			{{/* 将$page定义为当前主页 */}}
+			{{ $page := . }}
+			{{/* 遍历书籍主页的chapters项的数组 */}}
+			{{ range .Params.chapters }}
+			{{/* 用$u表示当前数组，也就是单个章的目录名称 */}}
+			{{ $u := . }}
+			{{ with $page.GetPage . }}
+			<!-- 将$thechapte定义为当前章对象-->
+			{{ $thechapter := . }}
+			<div class="toc-item">
+				<a href="{{ relref . $u }}" class="toc-link" data-type="chapter">
+					{{/* 遍历文件标题 */}}
+					{{ .Title }}
+				</a>
+				<div class="subsection-toc">
+					{{ range .Fragments.HeadingsMap }}
+					<a href="{{ relref $thechapter $u }}#{{ .ID }}" class="section-{{ .Level }}">
+						{{ .Title }}
+					</a>
+					{{ end }}
+				</div>
+			</div>
+			{{ end }}
+			{{ end }}
+		</ul>
 	</div>
 
-	{{/* 动态加载容器 */}}
-	<div id="chapter-container"></div>
-</article>
+	{{/* 正文区 */}}
+	<article class="book-content">
+		<div id="book-intro">
+			<h1>{{ .Title }}</h1>
+			<div class="book-description">
+				{{ .Content }}
+			</div>
+		</div>
+
+		{{/* 动态加载容器 */}}
+		<div id="chapter-container"></div>
+	</article>
+</div>
 {{end}}
