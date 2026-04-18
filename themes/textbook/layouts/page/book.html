@@ -20,23 +20,17 @@
 	{{/* 侧边栏区 */}}
 	{{/* 目录 */}}
 	<div class="tocs">
+		<!-- 目录区的标头 -->
 		<div class="toc-header">
 			<div class="toc-title">目录</div>
-			<div class="book-meta">
-				<div>
-					共 {{ len .Params.chapters}}章 作者: {{ .Page.Params.author}}
-
-				</div>
-			</div>
 		</div>
 
-		<ul class="toc-list">
+		<!-- 目录条目列表 -->
+		<div class="toc-list">
 			<!-- 书籍简介链接 -->
-			<li class="toc-item">
-				<a href="#book-intro" class="toc-link" data-url="{{ .Permalink }}" data-type="book">
-					前言
-				</a>
-			</li>
+			<a href="#book-intro" class="toc-link section-1" data-url="{{ .Permalink }}" data-type="book">
+				前言
+			</a>
 
 			<!-- 各章节链接 -->
 			{{/* 将$page定义为当前主页 */}}
@@ -48,22 +42,22 @@
 			{{ with $page.GetPage . }}
 			<!-- 将$thechapte定义为当前章对象-->
 			{{ $thechapter := . }}
-			<div class="toc-item">
-				<a href="{{ relref . $u }}" class="toc-link" data-type="chapter">
-					{{/* 遍历文件标题 */}}
+			<a href="{{ relref . $u }}" class="toc-link section-1" data-type="chapter">
+				{{/* 遍历文件标题(章标题) */}}
+				{{ .Title }}
+			</a>
+
+			<div class="subsection">
+				{{ range .Fragments.HeadingsMap }}
+				<!-- 遍历次级标题 -->
+				<a href="{{ relref $thechapter $u }}#{{ .ID }}" class="section-{{ .Level }} toc-link">
 					{{ .Title }}
 				</a>
-				<div class="subsection-toc">
-					{{ range .Fragments.HeadingsMap }}
-					<a href="{{ relref $thechapter $u }}#{{ .ID }}" class="section-{{ .Level }}">
-						{{ .Title }}
-					</a>
-					{{ end }}
-				</div>
+				{{ end }}
 			</div>
 			{{ end }}
 			{{ end }}
-		</ul>
+		</div>
 	</div>
 
 	{{/* 正文区 */}}

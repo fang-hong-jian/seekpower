@@ -1,3 +1,4 @@
+/*book主页不要页眉*/
 header#homeheader {
 	display: none;
 }
@@ -10,6 +11,7 @@ main {
 	min-height: 90vh;
 }
 
+/*=================================*/
 /*页面路径导航样式*/
 .page-path {
 	display: flex;
@@ -51,95 +53,94 @@ main {
 	margin-right: 5px;
 }
 
+/*=================================*/
+
 /*书籍内容*/
 main>div {
 	display: flex;
 }
 
 
-/* 书籍模板左侧边栏 */
+/*=================================*/
+/* 书籍模板目录栏 */
 div.tocs {
 	display: flex;
 	flex-direction: column;
-	width: 320px;
+	width: 280px;
 	border-right: 1px solid #e0e0e0;
 	padding-top: 0px;
 	/* y向溢出 */
 	overflow-y: auto;
 	/* 收缩 */
 	flex-shrink: 0;
+	margin-left: 32px;
 }
 
 
-/*书名*/
-div.bookname {
-	font-size: 24px;
-	font-weight: 700;
-	padding-left: 32px;
-	padding-bottom: 5px;
-}
-
-/* 目录区 */
+/* 目录标头区 */
 .toc-header {
-	padding-left: 32px;
-	padding-right: 32px;
-	padding-top: 10px;
 	border-bottom: 1px solid #e0e0e0;
 }
 
-.book-meta>div {
-	margin: 0px;
-	padding-bottom: 8px;
-}
-
-.book-meta>p>span {
-	font-family: "Inter";
-	font-weight: 400;
-	margin: 0px;
-	padding-right: 8px;
-}
-
-/* 目录标头 */
 .toc-title {
 	font-size: 24px;
 	font-weight: 600;
 }
 
-.toc-list {
-	list-style: none;
-}
-
-.toc-item {
-	margin-bottom: 8px;
-}
+/*目录条目栏*/
 
 .toc-link {
 	display: block;
-	padding-top: 10px;
-	padding-bottom: 10px;
 	text-decoration: none;
 	color: #2c3e50;
-	border-radius: 6px;
 	transition: all 0.2s;
+	margin: 0px;
+	padding: 0px;
+	margin-left: 3px;
 }
 
 .toc-link:hover {
-	background: #e9ecef;
 	font-weight: 700;
+	text-decoration-line: underline;
+	text-decoration-color: darkorange;
+	text-decoration-thickness: 2px;
 }
 
 .toc-link.active {
 	background: #e9ecef;
 }
 
+/*一级标题*/
+.section-1s {
+	display: flex;
+	margin: 0px;
+	padding: 0px;
+}
+
+.section-1 {
+	font-size: 18px;
+}
+
+/*次级标题*/
+.subsection {
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	padding-left: 4px;
+	margin-left: 6px;
+	border-left: 1px solid #e0e0e0;
+}
+
 .section-2 {
+	display: block;
 	font-size: 16px;
-	margin-left: 5px;
 }
 
 .section-3 {
-	padding-left: 5px;
-	margin-left: 5px;
+	display: block;
+	margin-left: 6px;
+	padding-left: 6px;
+	border-left: 1px solid #e0e0e0;
 }
 
 /* 正文区 */

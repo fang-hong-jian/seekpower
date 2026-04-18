@@ -6,7 +6,7 @@ lastmod: 2026-04-13
 type: page
 layout: book
 author: 方鸿渐
-finish: 连载中
+finish: 空
 chapters:
     - Aristotle
     - Frege
