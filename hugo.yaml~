@@ -6,40 +6,23 @@ theme: "textbook"
 menu:
   #主导航
   main:
-    - identifier: author
-      name: 方鸿渐
-      url: /
-      weight: 1
-      params:
-        icon: "/icons/logo.png"
     - identifier: home
       name: 首页
       url: /
-      weight: 10
-      params:
-        icon: "/icons/home.png"
     - identifier: about-site
       name: 关于本站
       url: /about-site/
-      weight: 20
-      params:
-        icon: "/icons/site.png"
     - identifier: about-me
       name: 关于我
       url: /about-me/
-      weight: 30
-      params:
-        icon: "/icons/me.png"
   # 副导航
   second:
     - identifier: comment
       name: 留言
       url: /message/
-      weight: 10
     - identifier: login
       name: 登录
       url: /login/
-      weight: 20
 
 disableKinds: ["taxonomy", "term"]
 hasCJKLanguage: true
@@ -49,11 +32,6 @@ enableEmoji: true #启用emoji表情
 enableInlineShortcodes: true #启用内联短代码
 
 markup: # 配置markdown解析器
-  # 目录设置
-  tableOfContents:
-    endLevel: 2
-    ordered: false
-    startLevel: 2
   goldmark: # 配置Goldmark解析器
     extensions: # 启用扩展
       cjk: # CJK 扩展

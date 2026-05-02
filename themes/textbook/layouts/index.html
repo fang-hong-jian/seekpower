@@ -7,7 +7,8 @@
 <style>
 	#home {
 		background-color: var(--active-bgcolor);
-		border-radius: 8px;
+		border-radius: var(--active-border-radius);
+		color: var(--active-fontcolor);
 	}
 
 </style>
@@ -27,14 +28,14 @@
 	<div class="subjects">
 		{{/* 全部科目 */}}
 		<button class="subject active" id="all">
-			<img src="/icons/all.png"> <span>全部</span>
+			<span>全部</span>
 		</button>
 
 		{{/*提取book_name文件，赋值给$subjects变量 */}}
 		{{ $subjects := hugo.Data.booknames.book_name }}
 		{{ range $subjects }}
 		<button class="subject" id="{{ .id }}">
-			<img src="{{ .icon }}"><span>{{ .name }}</span>
+			<span>{{ .name }}</span>
 		</button>
 		{{ end }}
 	</div>

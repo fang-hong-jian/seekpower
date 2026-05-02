@@ -4,7 +4,6 @@
 
 {{/* 书籍主页 */}}
 {{define "main"}}
-
 <link rel="stylesheet" href={{"css/style-book.css"| relURL}} />
 <script src={{"js/book.js"| relURL}}></script>
 {{/* 页面路径导航 */}}
@@ -42,12 +41,10 @@
 			{{ with $page.GetPage . }}
 			<!-- 将$thechapte定义为当前章对象-->
 			{{ $thechapter := . }}
-			<div class="section-1s">
-				<a class="toc-link section-1" href="{{ relref . $u }}">
-					{{/* 遍历文件标题(章标题) */}}
-					{{ .Title }}
-				</a>
-			</div>
+			<a href="{{ relref . $u }}" class="toc-link section-1" data-type="chapter">
+				{{/* 遍历文件标题(章标题) */}}
+				{{ .Title }}
+			</a>
 
 			<div class="subsection">
 				{{ range .Fragments.HeadingsMap }}

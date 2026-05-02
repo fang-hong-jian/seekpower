@@ -4,18 +4,8 @@
 
 {{/* 书籍主页 */}}
 {{define "main"}}
-
 <link rel="stylesheet" href={{"css/style-book.css"| relURL}} />
 <script src={{"js/book.js"| relURL}}></script>
-{{/* 页面路径导航 */}}
-<nav class="page-path">
-	<!--首页 -->
-	<a class="home-page-path path" href={{absURL "" }}>
-		首页
-	</a>
-	<span class="arrow"></span>
-	<a class="book-page-path path" href="{{ .Permalink }}">{{ .Params.bookname }}</a>
-</nav>
 <div>
 	{{/* 侧边栏区 */}}
 	{{/* 目录 */}}

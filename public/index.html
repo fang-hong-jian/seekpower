@@ -6,9 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-	<title>
-年轻人，你渴望力量吗？
-</title>
+	<title>年轻人，你渴望力量吗？</title>
 	<link rel="stylesheet" href=/css/style-baseof.css />
 	<link rel="shortcut icon" href=/icons/logo.png type="image/x-icon" />
 	<script>
@@ -30,58 +28,36 @@
 	<link rel="stylesheet" href=/css/style-header.css />
 <header id="homeheader">
 	<nav class="left" aria-label="主导航">
-		
-		
-		
-		
-
-		
-		<a href="/" id="logo">
-			<img src="/icons/logo.png" />
-			<div id="author">
-				方鸿渐
+		<a href="/" id="author">
+			<img src=/icons/logo.png alt="logo">
+			<div class="authorname">
+				POWER
 			</div>
 		</a>
-		
-
-		
 		
 		
 		
 		<a href="/" class="menus-left" id="home">
-			<img src="/icons/home.png" />
 			<div>
 				首页
 			</div>
 		</a>
 
 		
-
-		
-		
-		
 		
 		<a href="/about-site/" class="menus-left" id="about-site">
-			<img src="/icons/site.png" />
 			<div>
 				关于本站
 			</div>
 		</a>
 
 		
-
-		
-		
-		
 		
 		<a href="/about-me/" class="menus-left" id="about-me">
-			<img src="/icons/me.png" />
 			<div>
 				关于我
 			</div>
 		</a>
-
-		
 
 		
 	</nav>
@@ -108,7 +84,8 @@
 <style>
 	#home {
 		background-color: var(--active-bgcolor);
-		border-radius: 8px;
+		border-radius: var(--active-border-radius);
+		color: var(--active-fontcolor);
 	}
 
 </style>
@@ -128,22 +105,22 @@
 	<div class="subjects">
 		
 		<button class="subject active" id="all">
-			<img src="/icons/all.png"> <span>全部</span>
+			<span>全部</span>
 		</button>
 
 		
 		
 		
 		<button class="subject" id="math">
-			<img src="icons/mathbooks.png"><span>数学</span>
+			<span>数学</span>
 		</button>
 		
 		<button class="subject" id="computer">
-			<img src="icons/computerbooks.png"><span>计算机</span>
+			<span>计算机</span>
 		</button>
 		
 		<button class="subject" id="other">
-			<img src="icons/otherbooks.png"><span>其他</span>
+			<span>其他</span>
 		</button>
 		
 	</div>

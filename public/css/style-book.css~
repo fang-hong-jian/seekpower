@@ -103,6 +103,7 @@ div.tocs {
 	font-weight: 700;
 	text-decoration-line: underline;
 	text-decoration-color: darkorange;
+	text-decoration-thickness: 2px;
 }
 
 .toc-link.active {

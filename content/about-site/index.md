@@ -8,7 +8,8 @@ layout: single
 <style>
 #about-site {
 		background-color: var(--active-bgcolor);
-		border-radius: 8px;
+		border-radius: 16px;
+        color:var(--active-fontcolor);
 	}
 </style>
 

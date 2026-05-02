@@ -5,5 +5,11 @@ type: page
 layout: single
 ---
 
+<style>
+#about-site {
+		background-color: var(--active-bgcolor);
+		border-radius: 16px;
+	}
+</style>
 
 本站

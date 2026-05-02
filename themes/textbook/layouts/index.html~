@@ -7,7 +7,7 @@
 <style>
 	#home {
 		background-color: var(--active-bgcolor);
-		border-radius: 8px;
+		border-radius: var(--active-border-radius);
 	}
 
 </style>
@@ -18,9 +18,6 @@
 	</h1>
 	<img src="/icons/home-right.png" class="home-right">
 </div>
-<p id="test">
-	label
-</p>
 
 
 {{/* 书籍陈列栏*/}}
@@ -30,14 +27,14 @@
 	<div class="subjects">
 		{{/* 全部科目 */}}
 		<button class="subject active" id="all">
-			<img src="/icons/all.png"> <span>全部</span>
+			<span>全部</span>
 		</button>
 
 		{{/*提取book_name文件，赋值给$subjects变量 */}}
 		{{ $subjects := hugo.Data.booknames.book_name }}
 		{{ range $subjects }}
 		<button class="subject" id="{{ .id }}">
-			<img src="{{ .icon }}"><span>{{ .name }}</span>
+			<span>{{ .name }}</span>
 		</button>
 		{{ end }}
 	</div>
@@ -66,7 +63,6 @@
 	</div>
 
 </div>
-<a href="#test" target="_self">Anchor Text</a>
 <!-- .Content 会渲染 content/_index.md 文件中的Markdown内容 -->
 {{ .Content }}
 {{ end }}

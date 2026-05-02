@@ -41,8 +41,8 @@ div.display {
 	flex-direction: row;
 	align-items: center;
 	justify-content: flex-start;
-	padding-left: 30px;
-	padding-right: 30px;
+	padding-left: 40px;
+	padding-right: 40px;
 	border-top-style: solid;
 	border-top-width: 1px;
 	border-top-color: var(--border-color);
@@ -59,7 +59,7 @@ div.display {
 	align-items: center;
 	height: 60px;
 	padding: 15px;
-	padding-left: 30px;
+	padding-left: 15px;
 	font-family: var(--font-sans);
 	font-size: 22px;
 	font-weight: 600;
@@ -87,13 +87,15 @@ div.display {
 /* 激活的科目导航按钮 */
 .subject.active {
 	background-color: var(--active-bgcolor);
-	border-radius: 8px;
+	border-radius: 16px;
+	color: darkcyan;
 }
 
 /* 悬停时科目导航按钮 */
 .subject:hover {
 	background-color: var(--active-bgcolor);
-	border-radius: 8px;
+	border-radius: 16px;
+	color: darkcyan;
 	/* transform: scale(0.98); */
 }
 
@@ -101,15 +103,6 @@ div.display {
 .subject:active {
 	transform: scale(0.98);
 }
-
-/* 下方导航栏 */
-/* .allbooks {
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-justify-content: flex-start;
-min-height: 500px;
-} */
 
 /* 陈列栏 */
 

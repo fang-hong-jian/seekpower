@@ -8,9 +8,9 @@ layout: single
 <style>
 #about-me {
 		background-color: var(--active-bgcolor);
-		border-radius: 8px;
+		border-radius: 16px;
+        color:var(--active-fontcolor);
 	}
-
 </style>
 
 资质愚钝的大龄散修，兴趣使然的学生。
