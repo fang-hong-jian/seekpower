@@ -14,7 +14,8 @@
 	/* 激活时导航按钮背景颜色 */
 	--active-bgcolor: rgba(85, 162, 160, 0.15);
 	/*主页导航栏激活时文字颜色*/
-	--active-fontcolor: rgb(85, 162, 160);
+	--active-fontcolor: darkcyan;
+	/*--active-fontcolor: rgb(85, 162, 160);*/
 	/*主页激活时边框倒角*/
 	--active-border-radius: 15px;
 	/* 分界线颜色 */

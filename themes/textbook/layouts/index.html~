@@ -8,6 +8,7 @@
 	#home {
 		background-color: var(--active-bgcolor);
 		border-radius: var(--active-border-radius);
+		color: var(--active-fontcolor);
 	}
 
 </style>
@@ -45,11 +46,23 @@
 		{{ range $subject.books }}
 		{{ $book := site.GetPage .url }}
 		<a class="allbooks active {{ $subject.cardclass }}" href="{{ .url }}">
-			<div class="bookname">
-				{{ $book.Params.bookname }}
-			</div>
-			<div class="book-describe">
-				{{ $book.Params.describe}}
+			<div class="book-info">
+
+				<!--书名-->
+				<div class="bookname">
+					{{ $book.Params.bookname }}
+				</div>
+
+				<!-- 副标题 -->
+				{{ with $book.Params.subtitle }}
+				<div class="book-subtitle">
+					{{ . }}
+				</div>
+				{{ end }}
+				<!--描述-->
+				<div class="book-describe">
+					{{ $book.Params.describe}}
+				</div>
 			</div>
 			<div class="book-meta">
 				<div> 共{{ len $book.Params.chapters }}章 </div>

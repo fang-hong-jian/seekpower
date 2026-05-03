@@ -15,13 +15,12 @@ body>header {
 	left: 0;
 	width: 100%;
 	background-color: white;
-	box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+	/*box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);*/
 	/* 阴影效果 */
-	transition: box-shadow 0.3s ease;
-	/* 添加过渡效果使变化更平滑 */
 	z-index: 1000;
 	/* 确保在最上层 */
 	font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+	border: 1px solid var(--border-color);
 }
 
 /*左导航栏左侧边距20*/
