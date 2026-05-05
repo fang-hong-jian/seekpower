@@ -9,13 +9,6 @@
     <lastBuildDate>Mon, 13 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.seekpower.top/math/philosophy-of-mathematics/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>亚里士多德</title>
-      <link>https://www.seekpower.top/math/philosophy-of-mathematics/aristotle/</link>
-      <pubDate>Fri, 27 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://www.seekpower.top/math/philosophy-of-mathematics/aristotle/</guid>
-      <description>&lt;h2 id=&#34;亚里士多德的生平&#34;&gt;亚里士多德的生平&lt;/h2&gt;&#xA;&lt;h3 id=&#34;测试&#34;&gt;测试&lt;/h3&gt;&#xA;&lt;p&gt;亚里士多德（Aristotle，公元前384～前322），古希腊先哲，古代著名哲学家、科学家和教育家之一，被誉为希腊哲学的集大成者。他是柏拉图的学生，亚历山大的老师。他的写作涉及伦理学、形而上学、心理学、经济学、神学、政治学、修辞学、自然科学、教育学、诗歌、风俗及雅典法律，构建了西方哲学的第一个广泛系统，包含道德、美学、逻辑、科学、政治和玄学。&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>柏拉图</title>
       <link>https://www.seekpower.top/math/philosophy-of-mathematics/plato/</link>
       <pubDate>Fri, 27 Mar 2026 00:00:00 +0000</pubDate>
@@ -28,6 +21,13 @@
       <pubDate>Fri, 27 Mar 2026 00:00:00 +0000</pubDate>
       <guid>https://www.seekpower.top/math/philosophy-of-mathematics/thales/</guid>
       <description>&lt;h2 id=&#34;始&#34;&gt;始&lt;/h2&gt;&#xA;&lt;p&gt;泰勒斯，男，古希腊时期的思想家、科学家、哲学家，出生于爱奥尼亚的米利都城，创建了古希腊最早的哲学学派，是希腊最早的哲学学派——米利都学派（也称爱奥尼亚学派）的创始人。古希腊七贤之一，西方思想史上第一个有记载有名字留下来的思想家，被称为“科学和哲学之祖”。泰勒斯是古希腊及西方第一个自然科学家和哲学家。泰勒斯的学生有阿那克西曼德、阿那克西美尼等。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>亚里士多德</title>
+      <link>https://www.seekpower.top/math/philosophy-of-mathematics/aristotle/</link>
+      <pubDate>Fri, 27 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.seekpower.top/math/philosophy-of-mathematics/aristotle/</guid>
+      <description>&lt;h2 id=&#34;亚里士多德的生平&#34;&gt;亚里士多德的生平&lt;/h2&gt;&#xA;&lt;h3 id=&#34;测试&#34;&gt;测试&lt;/h3&gt;&#xA;&lt;p&gt;亚里士多德（Aristotle，公元前384～前322），古希腊先哲，古代著名哲学家、科学家和教育家之一，被誉为希腊哲学的集大成者。他是柏拉图的学生，亚历山大的老师。他的写作涉及伦理学、形而上学、心理学、经济学、神学、政治学、修辞学、自然科学、教育学、诗歌、风俗及雅典法律，构建了西方哲学的第一个广泛系统，包含道德、美学、逻辑、科学、政治和玄学。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

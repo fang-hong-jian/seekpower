@@ -6,14 +6,14 @@
     <description>Recent content in 前言 on 年轻人，你渴望力量吗？</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 26 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.seekpower.top/other/latex-tutorial/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>$\LaTeX$历史</title>
-      <link>https://www.seekpower.top/other/latex-tutorial/latex-history/</link>
-      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://www.seekpower.top/other/latex-tutorial/latex-history/</guid>
-      <description>&lt;p&gt;什么是LaTeX?&lt;/p&gt;</description>
+      <title>$\LaTeX$的文档结构</title>
+      <link>https://www.seekpower.top/other/latex-tutorial/the-structure-of-a-latex-document/</link>
+      <pubDate>Wed, 01 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.seekpower.top/other/latex-tutorial/the-structure-of-a-latex-document/</guid>
+      <description>&lt;h2 id=&#34;说在前面&#34;&gt;说在前面&lt;/h2&gt;&#xA;&lt;p&gt;这是我本人学习《The LaTeX Companion》第三版的笔记，但并不是翻译。&lt;/p&gt;&#xA;&lt;p&gt;书籍的第一章对$\LaTeX$及其历史进行了相当长的介绍，这是几乎每一本关于$\LaTeX$的书都会写的介绍，感兴趣的可以自行查阅相关资料，在这里不再赘述，我们从第二章开始。&lt;/p&gt;</description>
     </item>
     <item>
       <title>$\LaTeX$简介</title>

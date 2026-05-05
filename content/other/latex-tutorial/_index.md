@@ -9,7 +9,7 @@ author: 方鸿渐
 finish: 空
 chapters:
     - latex-introduction
-    - latex-history
+    - the-structure-of-a-latex-document
 describe: $\LaTeX$一种标记语言。用于排版。
 ---
 

@@ -1,8 +1,50 @@
 /* 书籍主页模板 */
 main {
 	display: flex;
-	margin-top: 65px;
+	flex-direction: column;
+	margin-top: 57px;
 	min-height: 90vh;
+}
+
+/*路径导航栏*/
+.path-nav {
+	position: fixed;
+	color: darkcyan;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	background-color: white;
+	border-bottom: 1px solid var(--border-color);
+}
+
+/*去掉链接样式*/
+.path-nav>a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/*首页路径*/
+.home-path {
+	margin-left: 40px;
+}
+
+/*路径导向静态右箭头*/
+.path-nav-arrow {
+	margin-left: 5px;
+	margin-right: 5px;
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	border-right: 1.5px solid var(--color-text);
+	border-bottom: 1.5px solid var(--color-text);
+	transform: rotate(-45deg) translateY(-2px);
+}
+
+/*书籍主页内容*/
+.book-home {
+	margin-top: 27px;
+	display: flex;
+	min-height: 100%;
 	justify-content: space-between;
 }
 
@@ -91,7 +133,6 @@ div.tocs {
 /*==========================文章区=====================*/
 /* 正文区 */
 .book-content {
-	margin-left: 25px;
 	overflow-y: auto;
 	min-width: 600px;
 	max-width: 800px;
@@ -162,7 +203,8 @@ div.tocs {
 }
 
 
-/*==========================文章区=====================*/
+/*==========================右侧边栏=====================*/
 aside {
-	width: 250px;
+	width: 300px;
+	border-left: 1px solid var(--border-color);
 }
