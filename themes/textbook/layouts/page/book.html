@@ -26,13 +26,13 @@
 			</a>
 
 			<!-- 各章节链接 -->
-			<!--将$page定义为当前主页-->
+			<!--将$page定义为当前书籍主页-->
 			{{ $page := . }}
 			<!--遍历书籍主页的chapters项的数组-->
-			{{ range .Params.chapters }}
 			<!--用$u表示当前数组，也就是单个章的目录名称-->
-			{{ $u := . }}
+			{{ range $u :=.Params.chapters }}
 			{{ with $page.GetPage . }}
+			<!--将当前章对象绑定为.-->
 			<!-- 将$thechapte定义为当前章对象-->
 			{{ $thechapter := . }}
 			<a href="{{ relref . $u }}" class="toc-link section-1" data-type="chapter">
