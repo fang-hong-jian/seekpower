@@ -46,8 +46,8 @@
 		{{ range $subject.books }}
 		{{ $book := site.GetPage .url }}
 		<a class="allbooks active {{ $subject.cardclass }}" href="{{ .url }}">
+			<!-- 包括书标题，副标题，描述在内的书籍信息 -->
 			<div class="book-info">
-
 				<!--书名-->
 				<div class="bookname">
 					{{ $book.Params.bookname }}

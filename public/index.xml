@@ -5,7 +5,7 @@
     <link>https://www.seekpower.top/</link>
     <description>Recent content in 首页 on 年轻人，你渴望力量吗？</description>
     <generator>Hugo</generator>
-    <language>zh-cn</language>
+    <language>zh-CN</language>
     <lastBuildDate>Sun, 26 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.seekpower.top/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -69,7 +69,7 @@
       <link>https://www.seekpower.top/about-site/</link>
       <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://www.seekpower.top/about-site/</guid>
-      <description>&lt;style&gt;&#xD;&#xA;#about-site {&#xD;&#xA;&#x9;&#x9;background-color: var(--active-bgcolor);&#xD;&#xA;&#x9;&#x9;border-radius: 16px;&#xD;&#xA;        color:var(--active-fontcolor);&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/style&gt;&#xD;&#xA;&lt;p&gt;本站&lt;/p&gt;</description>
+      <description>&lt;style&gt;&#xD;&#xA;#about-site {&#xD;&#xA;&#x9;&#x9;background-color: var(--active-bgcolor);&#xD;&#xA;&#x9;&#x9;border-radius: 16px;&#xD;&#xA;        color:var(--active-fontcolor);&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/style&gt;&#xD;&#xA;&lt;p&gt;本站使用hugo搭建&lt;/p&gt;</description>
     </item>
     <item>
       <title>关于我</title>
@@ -83,14 +83,14 @@
       <link>https://www.seekpower.top/other/latex-tutorial/the-structure-of-a-latex-document/</link>
       <pubDate>Wed, 01 Oct 2025 00:00:00 +0000</pubDate>
       <guid>https://www.seekpower.top/other/latex-tutorial/the-structure-of-a-latex-document/</guid>
-      <description>&lt;h2 id=&#34;说在前面&#34;&gt;说在前面&lt;/h2&gt;&#xA;&lt;p&gt;这是我本人学习《The LaTeX Companion》第三版的笔记，但并不是翻译。&lt;/p&gt;&#xA;&lt;p&gt;书籍的第一章对$\LaTeX$及其历史进行了相当长的介绍，这是几乎每一本关于$\LaTeX$的书都会写的介绍，感兴趣的可以自行查阅相关资料，在这里不再赘述，我们从第二章开始。&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;latex的文档结构&#34;&gt;$\LaTeX$的文档结构&lt;/h1&gt;&#xA;&lt;h2 id=&#34;说在前面&#34;&gt;说在前面&lt;/h2&gt;&#xA;&lt;p&gt;这是我本人学习《The LaTeX Companion》第三版的笔记，但并不是翻译。&lt;/p&gt;&#xA;&lt;p&gt;书籍的第一章对$\LaTeX$及其历史进行了相当长的介绍，这是几乎每一本关于$\LaTeX$的书都会写的介绍，感兴趣的可以自行查阅相关资料，在这里不再赘述，我们从第二章开始。&lt;/p&gt;</description>
     </item>
     <item>
-      <title>$\LaTeX$简介</title>
+      <title></title>
       <link>https://www.seekpower.top/other/latex-tutorial/latex-introduction/</link>
       <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
       <guid>https://www.seekpower.top/other/latex-tutorial/latex-introduction/</guid>
-      <description>&lt;h2 id=&#34;什么是latex&#34;&gt;什么是$\LaTeX$?&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;img/latex.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;\frac{1}{2}&#xA;$$&lt;/p&gt;&#xA;&lt;p&gt;勾股定理可以表示为 $a^2 + b^2 = c^2$，其中 $c$ 是斜边。&lt;/p&gt;&#xA;&lt;p&gt;二次方程的求根公式为：&#xA;$$&#xA;x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}&#xA;$$&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;latex简介&#34;&gt;$\LaTeX$简介&lt;/h1&gt;&#xA;&lt;h2 id=&#34;什么是latex&#34;&gt;什么是$\LaTeX$?&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;img/latex.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;\frac{1}{2}&#xA;$$&lt;/p&gt;&#xA;&lt;p&gt;勾股定理可以表示为 $a^2 + b^2 = c^2$，其中 $c$ 是斜边。&lt;/p&gt;&#xA;&lt;p&gt;二次方程的求根公式为：&#xA;$$&#xA;x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}&#xA;$$&lt;/p&gt;&#xA;&lt;h2 id=&#34;标题测试&#34;&gt;标题测试&lt;/h2&gt;&#xA;&lt;h2 id=&#34;标题测试-1&#34;&gt;标题测试&lt;/h2&gt;&#xA;&lt;h2 id=&#34;标题测试-2&#34;&gt;标题测试&lt;/h2&gt;&#xA;&lt;h2 id=&#34;标题测试-3&#34;&gt;标题测试&lt;/h2&gt;&#xA;&lt;h2 id=&#34;标题测试-4&#34;&gt;标题测试&lt;/h2&gt;&#xA;&lt;h2 id=&#34;标题测试-5&#34;&gt;标题测试&lt;/h2&gt;&#xA;&lt;h2 id=&#34;标题测试-6&#34;&gt;标题测试&lt;/h2&gt;&#xA;&lt;h2 id=&#34;标题测试-7&#34;&gt;标题测试&lt;/h2&gt;&#xA;&lt;h2 id=&#34;标题测试-8&#34;&gt;标题测试&lt;/h2&gt;&#xA;&lt;h2 id=&#34;标题测试-9&#34;&gt;标题测试&lt;/h2&gt;&#xA;&lt;h2 id=&#34;标题测试-10&#34;&gt;标题测试&lt;/h2&gt;&#xA;&lt;h2 id=&#34;标题测试-11&#34;&gt;标题测试&lt;/h2&gt;&#xA;&lt;h2 id=&#34;标题测试-12&#34;&gt;标题测试&lt;/h2&gt;&#xA;&lt;h2 id=&#34;标题测试-13&#34;&gt;标题测试&lt;/h2&gt;&#xA;&lt;h2 id=&#34;标题测试-14&#34;&gt;标题测试&lt;/h2&gt;&#xA;&lt;h2 id=&#34;标题测试-15&#34;&gt;标题测试&lt;/h2&gt;&#xA;&lt;h2 id=&#34;标题测试-16&#34;&gt;标题测试&lt;/h2&gt;&#xA;&lt;h2 id=&#34;标题测试-17&#34;&gt;标题测试&lt;/h2&gt;&#xA;&lt;h2 id=&#34;标题测试-18&#34;&gt;标题测试&lt;/h2&gt;&#xA;&lt;h2 id=&#34;标题测试-19&#34;&gt;标题测试&lt;/h2&gt;&#xA;&lt;h2 id=&#34;标题测试-20&#34;&gt;标题测试&lt;/h2&gt;</description>
     </item>
     <item>
       <title>HTML的标签</title>

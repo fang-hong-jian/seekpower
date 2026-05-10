@@ -1,6 +1,5 @@
 ---
-bookname: "HTML教程"
-title: 前言
+title: "HTML教程"
 publishDate: 2026-01-15
 lastmod: 2026-04-13
 type: page
@@ -13,5 +12,7 @@ chapters:
     - html-history
 describe: HTML一种标记语言。通过一系列标签可以将网络上的文档格式统一，使分散的Internet资源连接为一个逻辑整体，前端必备。
 ---
+
+# HTML教程
 
 这里是书籍主页的正文，一般是课程介绍

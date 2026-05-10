@@ -1,12 +1,11 @@
 ---
-bookname: "HTML教程"
-title: 前言
+title: "HTML教程"
 publishDate: 2026-01-15
 lastmod: 2026-04-13
 type: page
 layout: book
 author: 方鸿渐
-finish: 连载中
+finish: 空
 chapters:
     - html-introduction
     - html-tags

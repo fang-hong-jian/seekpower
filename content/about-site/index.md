@@ -13,4 +13,4 @@ layout: single
 	}
 </style>
 
-本站
+本站使用hugo搭建

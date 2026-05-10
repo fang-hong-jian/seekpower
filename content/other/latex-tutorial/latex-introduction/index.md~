@@ -1,12 +1,13 @@
 ---
-title: $\LaTeX$简介
 type: page
 layout: chapter
 publishDate: 2023-10-01
 lastmod: 2026-01-26
 ---
 
-# 什么是$\LaTeX$?
+# $\LaTeX$简介
+
+## 什么是$\LaTeX$?
 
 ![](img/latex.png)
 
@@ -21,3 +22,25 @@ $$
 $$
 x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 $$
+
+## 标题测试
+
+## 标题测试
+
+## 标题测试
+
+## 标题测试
+
+## 标题测试
+
+## 标题测试
+
+## 标题测试
+
+## 标题测试
+
+## 标题测试
+
+## 标题测试
+
+## 标题测试

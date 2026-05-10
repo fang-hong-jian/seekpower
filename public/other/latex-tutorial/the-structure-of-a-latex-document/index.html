@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=zh-cn>
+<html lang=zh-CN>
 
 <head>
 	<meta charset="UTF-8">
@@ -103,12 +103,13 @@ $\LaTeX$的文档结构
 		</div>
 		
 		<div class="chapter-content">
-			<h2 id="说在前面">说在前面</h2>
+			<h1 id="latex的文档结构">$\LaTeX$的文档结构</h1>
+<h2 id="说在前面">说在前面</h2>
 <p>这是我本人学习《The LaTeX Companion》第三版的笔记，但并不是翻译。</p>
 <p>书籍的第一章对$\LaTeX$及其历史进行了相当长的介绍，这是几乎每一本关于$\LaTeX$的书都会写的介绍，感兴趣的可以自行查阅相关资料，在这里不再赘述，我们从第二章开始。</p>
 <p>看这一篇文章的正文之前，读者需要对$\LaTeX$有个大体的了解，知道$\LaTeX$是用来做什么的，并且已经将自己喜欢的$\LaTeX$发行版和编辑器安装并配置完成，能够成功编译一个最简单的文档。如果还不够了解，那么网络上有相当多的相关帖子，请自行搜索。</p>
 <p>这一篇介绍一下$\LaTeX$文档的结构，其中有不了解的地方也无妨，将来都会拆开细讲。</p>
-<h2 id="21源文件的整体结构">2.1、源文件的整体结构</h2>
+<h2 id="源文件的整体结构">源文件的整体结构</h2>
 <p>$\LaTeX$可以用来撰写不同类型的文档，如文章(article)、书籍(book)等。不同的文档可能有不同的逻辑结构。我们说，同一类型的文档具有相同的一般结构(但并不一定是排版外观相同)。指定文档类型的方法是在开头使用<code>\documentclass</code>命令，这个命令的必选参数指定文档类的名称，如book，或者article。而文档类型决定了哪些命令和环境是可用的，哪些不可用。例如，book文档类中可以使用章命令(<code>\chapter</code>)，但article文档类中就不可以。除此之外，文档类型还决定了文档的默认格式，如字号、字体、不同层级标题的位置等。在<code>\documentclass</code>命令的可选参数(选项)中填入一些选项可以修改这些格式。</p>
 <p>有很多命令可以用在不同类型的文档中，这样的命令组成的集称为包(package)，可以在<code>\documentclass</code>命令后面放置一个或多个<code>\usepackage</code>命令来告䜣$\LaTeX$你要使用哪些包。</p>
 <p><code>\usepackage</code>命令也有一个必选参数，用来指定包的名称，和一个可选参数(即选项)，用来调整包的行为。</p>
@@ -132,12 +133,12 @@ $\LaTeX$的文档结构
 <li>自己编写一个包含特殊参数的包，并调用它。</li>
 <li>在前言中用其它命令进行调整。</li>
 </ul>
-<h3 id="211-documentmetadata命令">2.1.1 \DocumentMetadata命令</h3>
+<h3 id="documentmetadata命令">\DocumentMetadata命令</h3>
 <p>在过去的$\LaTeX$ 2.09中，定义文档类的命令是<code>\documentstyle</code>，而且不能使用<code>\usepackage</code>命令。而$\LaTeX2\epsilon$定义文档类的命令则是用前面描述的<code>\documentclass</code>，以便区分新文档与旧文档。</p>
 <p>现在，$\LaTeX$又在进行一次重大的转变，LaTeX正在现代化以支持可访问的PDF/UA和其他重要的功能；而这一次的变化是向上兼容的，旧文档只要在<code>\documentclass</code>的前面添加<code>\DocumentMetadata</code>，就可以使用新特性，同时其他部分保持不变。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#66d9ef">\DocumentMetadata</span>{key/value list}
 </span></span></code></pre></div><p>这个声明(如果有的话)是文档的第一个命令，它的参数是一个键/值列表(key/value list)，在其中可以指定关于该文档的&quot;元数据(metadata)&quot;，这些元数据指导最终的输出，例如它是否遵循某个标准，是否是带标签的PDF，作者是谁，标题的什么，以及在生成PDF的元数据中显示的关键词等。所有这些元数据都被存储起来，以便包和用户可以以一致的方式访问数据。</p>
-<h3 id="212-文档类和包选项的设置">2.1.2 文档类和包选项的设置</h3>
+<h3 id="文档类和包选项的设置">文档类和包选项的设置</h3>
 <p>文档类和包的选项是调整文档的全局属性或个别包属性的简单方法。也可以通过文档类和包文件中定义的声明和设置命令进行更精细的控制，在加载了这些文件后可以使用这些命令。</p>
 <p>只有在包文件中明确声明了的选项，才能在<code>\usepackage</code>命令中设置，否则就会报错。而<code>\documentclass</code>对选项的处理有所不同，如果指定的选项没有在类文件中声明，它就会被认为是一个&quot;全局选项&quot;。</p>
 <p>对所有指定给<code>\documentclass</code>的选项，不管是已经在类文件中声明的，还是没有声明的，即全局的，都会自动传递所有的<code>\usepackage</code>。因此，这些类选项中的某个选项如果可以匹配某个<code>\usepackage</code>命令所调用的包，那么这个选项就会对这个包的调用命令生效，如不匹配，那么这个选项会被自动忽略。并且这些参数在<code>\documentclass</code>或<code>\usepackage</code>中的顺序并不重要。</p>
@@ -162,7 +163,7 @@ $\LaTeX$的文档结构
 </span></span></code></pre></div><p>这样，空格也能得以保留。随着$\LaTeX$支持新的键值结构，不会再去掉每一个空格，而是只将每一个键值对两端的空格修剪掉。因此，对于新的包，我们建议使用$\LaTeX$的机制。</p>
 <p>如果你想对文档类或包进行一些修改(例如，更改某些参数或重定义某些命令)，你可以将相关的代码放入一个单独的.sty文件中。然后在你要修改的包(或类)之后使用<code>\usepackage</code>命令加载这个文件。</p>
 <p>你也可以在文档的导言区中插入修改内容。在这种情况下，如果含有$\LaTeX2\epsilon$的内部命令(名称中有<code>@</code>符号的命令)，可能需要用放在<code>\makealetter</code>和<code>\makeatother</code>两个命令的中间; 如果是$\LaTeX3$内部命令(名称中有<code>_</code>和<code>:</code> 的命令)，则可以使用<code>\ExplSyntaxOn </code>和<code>\ExplSyntaxOff</code>。</p>
-<h3 id="213-front-mattermain-matter和back-matter">2.1.3 front matter、main matter和back matter</h3>
+<h3 id="front-mattermain-matter和back-matter">front matter、main matter和back matter</h3>
 <p>对较长的文档，如书籍，通常可以将内容分成三个区域: front matter、main matter和back matter。</p>
 <p>front matter通常包括标题页、目录、摘要，前言(有时候会被认为是正文的一部分)等。main matter包含主要的文本内容，即正文。back matter通常包括附录、参考文献、索引和后记、题词等。</p>
 <p>在排版中，这三个区域通常以不同的方式处理，使它们易于区分，例如，front matter和main matter使用不同的页码系统、前言中的标题不编号、以及main matter和back matter中的标题使用不同的编号风格。</p>
@@ -202,7 +203,7 @@ $\LaTeX$的文档结构
 <h4 id="back-matter">back matter</h4>
 <p>最常用的back matter元素可能就是参考文献和索引，这些元素也会在后面的内容中讲解。</p>
 <p>当然，你也可能有多个附录，这需要你用适当级别的标题引入它们。这些标题的编号方式和正文(main matter)不同。不过这不需要用户自己去考虑，声明了<code>\appendix</code>或者<code>\backmatter</code>命令后，编号将会自动调整，这些声明将back matter与正文分开。如果只有一个附录，通常是不需要编号的，因此这种情况下，你可以使用标题命令的带有星号的形式。</p>
-<h3 id="214-将源文档分割成多个文件">2.1.4 将源文档分割成多个文件</h3>
+<h3 id="将源文档分割成多个文件">将源文档分割成多个文件</h3>
 <p>利用<code>\input</code>命令或者<code>\include</code>命令可以将$\LaTeX$源文档分割成多个文件。<code>\input</code>的机制相当简单，只是单纯地将某个文件的全部内容插入指定位置。对<code>\input</code>来说，如果插入的文件的扩展名是<code>.tex</code>，那么插入时可以省略扩展名，如果是别的扩展名，则需要加上扩展名。我们用一个例子演示一下这个命令的作用:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#75715e">%创建一个文件test01.tex
 </span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">\documentclass</span>{article}
@@ -233,6 +234,182 @@ $\LaTeX$的文档结构
 <p>如果<code>.aux</code>文件中的信息是最新的，那么只处理文档的一部分大概不会出错，但如果这一部分中有任何一个计数器发生了变化，那么就可能需要重新编译整个文档，以确保索引、目录和参考文献引用都是正确的。</p>
 <p>还要注意，通过<code>\include</code>加载的每个文件，都会在新的一页开始，最后会在调用<code>\clearpage</code>后结束。这意味着，这部分文档中的浮动体不会溢出到该文件的内容所处的页面之外，因此，最好将一整章的内容放在一个文件中，再用<code>\include</code>插入。</p>
 <p>只处理一部分，是为了减少编译时间，提高效率，但建议这个功能小心使用，只有在一个或者多个章节都正在编写的阶段，才可以使用部分重新格式化。在需要输出最后的完整结果时，唯一真正安全的做法是重新处理整个文档。如果文档实在太大，那么也请确保按照正确的顺序依次处理各个部分(如有必要，多次处理)，以确保交叉引用和页码正确。最后，我们总是建议所有要插入的文件都创建为<code>.tex</code>文件。</p>
+<h3 id="askinclude-管理你的包含文件">askinclude-管理你的包含文件</h3>
+<p><code>askinclude</code>包(由Pablo Straub和Heiko Oberdiek创建)让我们在编译时可以交互式地选择要包含的文件。由于它需要交互，因此你在一些配置好的编辑器中直接编译可能会报错。我们建议命令行中编译。现在，我们来演示一下它的作用。我们需要创建三个文件:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#75715e">%创建第一个文件chapter01.tex
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">\chapter</span>{this is chapter one}
+</span></span><span style="display:flex;"><span>一
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\kant</span><span style="color:#a6e22e">[1]</span> <span style="color:#75715e">%用来生成一段伪文本，我们以后会经常用到
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#75715e">%创建第二个文件chapter02.tex
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">\chapter</span>{this is chapter two}
+</span></span><span style="display:flex;"><span>二
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\kant</span><span style="color:#a6e22e">[2]</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#75715e">%创建第三个文件，也是主文件main.tex
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">\documentclass</span>{book}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{ctex}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span><span style="color:#a6e22e">[makematch]</span>{askinclude}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{kantlipsum} <span style="color:#75715e">%用来生成伪文本的包
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{document}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\include</span>{chapter01}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\include</span>{chapter02}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{document}
+</span></span></code></pre></div><p>三个文件创建完成，我们编译主文件main.tex。注意用命令行: 首先用<code>cd</code>跳转到源文件所在的文件夹，然后输入:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>xelatex preamble.tex
+</span></span></code></pre></div><p>由于我们调用了<code>askinclude</code>包，命令行窗口中会给出一些交互选项。把前面的内容忽略，有用的内容大概如下:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>***********************************
+</span></span><span style="display:flex;"><span>*** Package askinclude Question ***
+</span></span><span style="display:flex;"><span>***********************************
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Files, found by previous run <span style="color:#66d9ef">in</span> \include<span style="color:#960050;background-color:#1e0010">:</span>
+</span></span><span style="display:flex;"><span>     (+) chapter01
+</span></span><span style="display:flex;"><span>     (-) chapter02
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Previous answer (makematch)<span style="color:#960050;background-color:#1e0010">:</span>
+</span></span><span style="display:flex;"><span>     [<span style="color:#66d9ef">chapter01</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Regular expressions<span style="color:#960050;background-color:#1e0010">:</span>
+</span></span><span style="display:flex;"><span>     [<span style="color:#66d9ef">noregexp</span>]  disabled
+</span></span><span style="display:flex;"><span> --&gt; [<span style="color:#66d9ef">makematch</span>] enabled, using package `makematch<span style="color:#960050;background-color:#1e0010">&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Which files <span style="color:#66d9ef">do</span> you want to include?
+</span></span><span style="display:flex;"><span>     [<span style="color:#66d9ef">foo,bar</span>]   comma separated file or pattern list
+</span></span><span style="display:flex;"><span>     [*]         all files
+</span></span><span style="display:flex;"><span>     [-]         no files
+</span></span><span style="display:flex;"><span>     [?]         ask <span style="color:#66d9ef">for</span> each file
+</span></span><span style="display:flex;"><span>     []          use the previous answer
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>\answer=
+</span></span></code></pre></div><p>我们要做的是在最后一行的<code>\answer=</code>后面给出交互信息。在这之前，我们先认识一下这些字符中有哪些信息。第5-7行指出了上一次运行中，哪些文件被编译了，哪些文件没有编译。<code>+</code>表示编译了，<code>-</code>表示未编译。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>(+) chapter01
+</span></span><span style="display:flex;"><span>(-) chapter02
+</span></span></code></pre></div><p>表示上一次运行，编译了chapter01.tex，而没有编译chapter02.tex。</p>
+<p>9-10行指出了上一次给出的交互信息，也就是我们上一次在<code>\answer=</code>后面给出的答案，上一次我们给出的是chapter01。</p>
+<p>12-14指出我们开启了哪种匹配模式，我们调用包<code>askinclude</code>的时候添加了选项<code>makematch</code>，因此这里显示<code>[makematch] enabled</code>。这个选项的作用我们接下来讲。</p>
+<p>16行是说，我们可以利用下列选项来确定编译哪些文件。17-21行列出了我们可以提交的信息的形式。</p>
+<p>17行: 提交一个列表，这个列表就是我们要处理的文件列表，文件名称与名称之间用逗号隔开。例如，我们想要编译的是<code>chapter01</code>，我们就可以在<code>\answer=</code>后面输入<code>chapter01</code>。如果我们想要编译的是<code>chapter01</code>和<code>chapter02</code>，那么我们可以输入<code>chapter01,chapter02</code>。注意不管哪种方式，中括号([ ])都是不用输入的。<code>makematch</code>的作用是为文件列表提供一种匹配模式，这种模式中，星号&quot;*&ldquo;是一种通配符，我们如果输入是的<code>cha*</code>，那么它会匹配所有以cha开头的文件名称，包括chapter01和chapter02，如果我们有一个chat文件，也会被包含。星号可以放在任何位置，可以放在前面，如，输入<code>*01</code>可以匹配所有以01结尾的文件名称。也可以放中间，如<code>ch*01</code>可以匹配所有以ch开头、以01结尾的文件名称，中间可以是任何内容。<code>!</code>的作用是排除，我们在某个名称前面加上<code>!</code>，即可排除这个文件。例如，我们输入<code>cha*,!chapter02</code>，就可以匹配所有以cha开头的文件，但是chapter02除外。在文件特别多，但又有个别文件不需要编译时，使用它很方便。</p>
+<p>要注意，在文件列表中，不管是星号<code>*</code>还是<code>!</code>，都要开启<code>makematch</code>选项才能生效。</p>
+<p>输入完成后，按回车键(enter)，会继续编译，直至完成输出。</p>
+<p>18行: 输入星号<code>*</code>，回车，编译所有的文件，输出结果。</p>
+<p>19行: 输入减号<code>-</code>，回车，所有文件都不编译，输出结果。</p>
+<p>20行: 输入问号<code>?</code>，则会对每一个文件询问是否编译。输会该选项之后回车，并不会立刻输出结果，而是会有新的交互信息。在当前的例子中，假设我们输入的是<code>?</code>，那么接下来会弹出如下信息:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>***********************************
+</span></span><span style="display:flex;"><span>*** Package askinclude Question ***
+</span></span><span style="display:flex;"><span>***********************************
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Include `chapter01<span style="color:#960050;background-color:#1e0010">&#39;</span>? [<span style="color:#66d9ef">y]es, [n]o, [A]ll, [N]one, [D</span>]efault (y)<span style="color:#960050;background-color:#1e0010">:</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>\answer=
+</span></span></code></pre></div><p>系统询问我们，是否包括(编译)chapter01? 这一次我们可以输入<code>y</code>，表示是(yes)，或者输入<code>n</code>，表示否(no)。如果我们选择的是这两个中的一个，那么接下来就会弹出下一个提示，即是否包括(编译)chapter02? 以此类推，直到最后一个。如果对某一个文件，我们选择的是<code>A</code>，即所有(ALL)，那么从当前文件到最后一个文件均被编译(而前面已经设置好的选项不会变化)，同时后面的文件均不再询问。<code>N</code>表示都不(None)，即从当前文件到最后一个文件均不编译，同时后面的文件均不再询问。<code>D</code>表示默认(Default)，默认情况下，遵循上一次运行时的选择。选择了<code>D</code>，即表示从当前文件到最后一个文件是否编译都按照上一次的选择。在所有文件都确认后，输出结果。</p>
+<p>21行: 什么都不输入，直接按回车，按照上次的选择编译，即，重复上一次运行的选项，输出结果。</p>
+<p>局部编译应当小心，不管是用<code>\includeonly</code>还是用<code>askinclude</code>。尤其应当小心<code>.aux</code>文件是否完整，以及是否是新的。例如，在我们编译chapter02时，如果我们上一次编译生成的chapter02.aux文件还在(正常情况下都不会消失)，那么系统会直接读取该文件。如果我们的chapter02.aux文件丢失了，那么编译时会产生的新的chapter02.aux文件。但是要注意，新的文件中有相当多的内容(尤其是计数器)的正确性，是以前面编译的文件(chapter01.aux)的计数器为基础的。在我们只编译chapter02时，系统先读取到chapter01.aux，知道这才是第一章，那么哪怕我们只编译chapter02，它也知道这是第二章，它会为标题选取正确的编号。</p>
+<p>最糟糕的情形是当前要编译的文件的.aux文件丢失了，前面的文件的.aux文件也丢失了。例如，我们误删了chapter02.aux，并且也误删了chapter01.aux，那么如果我们只编译chapter02，就不会生成chapter01.aux。由于没有了原来第一章的计数，计数器会从chapter02开始，生成一个chapter02.aux，并把第二章错当成是第一章。</p>
+<p>因此，我们应当注意的是，局部编译时不要轻易删除<code>.aux</code>文件，除非你清楚自己在做什么。如果所要编译的文件前面的<code>.aux</code>文件丢失了或者发生了变动，那么最好将整个文档重新编译。</p>
+<h3 id="tagging-在源文件中提供变体">tagging-在源文件中提供变体</h3>
+<p>有时候我们需要将多个版本的文档放在单个源文件中，特别是当大部分文本在多个不同版本之间共享的时候。Brent Longborough 提供了可以实现该功能的包。</p>
+<p>这个允许我们使用一些命令给不同的文本做相同或不同的标记，然后选择某个(或某些)标签作为<code>tagging</code>包的选项，就可以激活对应的标签，从而可以显示或隐藏标签对应的文本。我们选用一个简单的例子演示一下它的工作原理:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#66d9ef">\documentclass</span>{book}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{ctex}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span><span style="color:#a6e22e">[doc]</span>{tagging} <span style="color:#75715e">%选项中是要被激活的标签。
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{document}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\tagged</span>{doc}{doc被激活了} <span style="color:#75715e">%从导言区中可以看到，被激活的标签是doc，因此在输出结果中会有&#34;doc被激活了&#34;这句话。
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\tagged</span>{code}{code被激活了} <span style="color:#75715e">%code标签并没有被激活，因此这句话不会显示。
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{document}
+</span></span></code></pre></div><p>在输出的文档中只有一行文本:</p>
+<pre tabindex="0"><code>doc被激活了
+</code></pre><p>可以看到，我们在调用<code>tagging</code>包的选项中输入的选项，就是我们要激活的标签，正文中被该标签标记的文件就会得到相应的处理。</p>
+<p>现在我们详细介绍一下该包所提供的命令。</p>
+<p>首先是<code>\usepackage[label-list]{tagging}</code>，注意，选项之所以是<code>label-list</code>(标签列表)是因为可以同时激活多个标签，标签之间用逗号隔开。</p>
+<p><code>\tagged{label-list}{text}</code>: <code>\tagged</code>命令用一个或多个标签标记一段文本。标签列表中，只要至少有一个标签被激活，就会<strong>输出</strong>text，否(所有标签都未被激活)则<strong>隐藏</strong>text。</p>
+<p><code>\untagged{label-list}{text}</code>: <code>\untagged</code>与<code>\tagged</code>相反，标签列表中，只要至少有一个标签被激活，就会<strong>隐藏</strong>text，所有标签都不被激活时，<strong>输出</strong>text。</p>
+<p><code>\iftagged{label-list}{text01}{text02}</code>: 它将<code>\tagged</code>与<code>\untagged</code>相结合，在标签列表中，如果至少有一个标签被激活，则<strong>输出</strong>text01，否(所有标签都不被激活)则<strong>输出</strong>text02。</p>
+<p><code>\usetag{label-list}</code>: 在正文中使用，它可以将列表中所有的标签激活。</p>
+<p><code>\droptag{label-list}</code>: 在正文中使用，它可以将列表中所有的标签取消激活。</p>
+<p>另外，text可以是命令。</p>
+<p>现在，我们再用一个稍复杂的例子演示一下这些功能:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#75715e">%创建文件chapter01.tex
+</span></span></span><span style="display:flex;"><span>这是chapter01中的文本，用来放置文档(doc)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#75715e">%创建文件chapter02.tex
+</span></span></span><span style="display:flex;"><span>这是chapter02中的文本，用来放置代码(code)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#75715e">%创建主文件main.tex
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">\documentclass</span>{book}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{ctex}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span><span style="color:#a6e22e">[doc,nothing]</span>{tagging}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{kantlipsum}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{document}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\tagged</span>{doc}{doc标签被激活了}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\tagged</span>{doc,code}{doc标签和code标签至少有一个被激活了}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\tagged</span>{code}{code标签被激活了}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\tagged</span>{doc}{<span style="color:#66d9ef">\kant</span><span style="color:#a6e22e">[1]</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\untagged</span>{doc,code}{doc和code标签全都没有被激活}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\untagged</span>{code,other}{code和other标签全都没有被激活}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\untagged</span>{code}{code标签没有被激活}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\iftagged</span>{doc}{<span style="color:#66d9ef">\input</span>{chapter01}}{doc标签没有被激活}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\iftagged</span>{code}{<span style="color:#66d9ef">\input</span>{chapter02}}{code标签没有被激活}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usetag</span>{code,other} <span style="color:#75715e">%激活code和other标签
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\droptag</span>{doc,nothing} <span style="color:#75715e">%取消激活doc,noting标签
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\tagged</span>{doc}{doc标签被激活了}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\tagged</span>{code}{code标签被激活了}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\tagged</span>{}{空标签被激活了}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\untagged</span>{}{空标签始终不会被激活} <span style="color:#75715e">%不管激活了哪些标签，甚至不管有没有标签被激活，空标签始终都不被激活。
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{document}
+</span></span></code></pre></div><p>我们可以得到如下输出</p>
+<p><img src="img%5Ctagging.png" alt=""></p>
+<p>请确保自己理解了为什么这段代码会输出这样的内容。</p>
+<p>前面我们说这些text参数可以是命令，但有一些限制，例如不能是<code>\verb</code>命令。</p>
+<p><code>\verb</code>: 我们知道$\LaTeX$是一门标记语言，简单地说，它可以将一些字符编译成样式(这一点我们从前面的例子中都能看出来)。有些时候，我们想让字符原样显示出来，而不进行这样的转换，就可以使用<code>\verb</code>命令。例如，一般情况下，$\LaTeX$会将字符串<code>\LaTeX</code>编译成$\LaTeX$，而如果我们将<code>\LaTeX</code>作为<code>\verb</code>的参数，就可以原样输出。</p>
+<p><code>\verb</code>命令用一对竖线(|text|)或者等于号(=text=)来包括它的参数，例如，我们在正文中输入:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#66d9ef">\LaTeX</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\verb</span>|<span style="color:#66d9ef">\LaTeX</span>|
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\verb</span>=<span style="color:#66d9ef">\chapter</span>{one}=
+</span></span></code></pre></div><p>就会得到</p>
+<p><img src="img%5Cverb.png" alt=""></p>
+<p>但是如果我们在<code>tagging</code>包提供的这几个命令中使用<code>\verb</code>作为参数，如<code>\tagged{doc}{\verb|text|}</code>就会报错。</p>
+<p>另外，这类命令处理短文本很有用，如果要处理长文本，最好还是将它放入一个单独的文件中，然后再在某个<code>tagging</code>提供的命令中放入包含该文件的命令(如<code>\tagged{doc}{\input{chapter01}}</code>，就像我们前面演示的那样)。</p>
+<p>另一种方法是使用<code>taggedblock </code>环境或者<code>untaggedblock</code> 环境。 <code>taggedblock </code>环境相当于<code>\tagged</code>的功能，而<code>untaggedblock</code> 环境相当于<code>\untagged</code>的功能。我们用一个例子演示一下:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#66d9ef">\documentclass</span>{book}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{ctex}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span><span style="color:#a6e22e">[doc]</span>{tagging}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{document}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>环境中可以使用{<span style="color:#66d9ef">\tt\textbackslash</span> verb}命令，
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{taggedblock}{doc}
+</span></span><span style="display:flex;"><span>    例如<span style="color:#66d9ef">\verb</span>|<span style="color:#66d9ef">\LaTeX</span>|，<span style="color:#66d9ef">\verb</span>|#&amp;|等等
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{taggedblock}
+</span></span><span style="display:flex;"><span>。注意这个句号的位置，end所在的那一行后面不应当放其他文本，否则在该标签标记的文本被隐藏的时候，后面的这部分文本也会随之消失，例如:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{untaggedblock}{doc}
+</span></span><span style="display:flex;"><span>    这段话不会显示
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{untaggedblock}放在后面的这句话也不会显示
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{document}
+</span></span></code></pre></div><p>这段代码输出结果是:</p>
+<p><img src="img%5Ctagblock.png" alt=""></p>
+<p>应当注意的是，begin后面的空格会被忽略，实际上，代码中的单个换行和缩进都是空格，但是并不会出现在输出结果中。</p>
+<p>另外，环境中的内容中间插入的空格，会被保留到输出结果中，而且，这两个环境中可以使用<code>\verb</code>命令。</p>
+<p>最后，end紧跟其后的地方如果放了其他文本，那么在这个环境被隐藏的时候，这些文本也会被隐藏，应当小心这一特性。</p>
 
 		</div>
 	</article>

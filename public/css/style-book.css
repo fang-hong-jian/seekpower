@@ -1,3 +1,9 @@
+/*去掉页脚*/
+
+footer {
+	display: none;
+}
+
 /* 书籍主页模板 */
 main {
 	display: flex;
@@ -12,6 +18,7 @@ main {
 	color: darkcyan;
 	margin: 0px;
 	padding: 0px;
+	height: 27px;
 	width: 100%;
 	background-color: white;
 	border-bottom: 1px solid var(--border-color);
@@ -44,7 +51,7 @@ main {
 .book-home {
 	margin-top: 27px;
 	display: flex;
-	min-height: 100%;
+	min-height: inherit;
 	justify-content: space-between;
 }
 
@@ -56,6 +63,9 @@ div.tocs {
 	width: 260px;
 	border-right: 1px solid #e0e0e0;
 	padding-top: 0px;
+	position: sticky;
+	top: 86px;
+	height: 88vh;
 	/* y向溢出 */
 	overflow-y: auto;
 	/* 收缩 */
@@ -73,6 +83,7 @@ div.tocs {
 	margin: 0px;
 	padding: 0px;
 	margin-left: 3px;
+	color: var(--color-text);
 }
 
 .toc-link:hover {
@@ -86,38 +97,12 @@ div.tocs {
 	background: #e9ecef;
 }
 
-/*一级标题*/
-.section-1s {
+.sections-container {
 	display: flex;
-	margin: 0px;
-	padding: 0px;
+	flex-direction: column;
 }
 
-.section-1 {
-	font-size: 18px;
-}
 
-/*次级标题*/
-.subsection {
-	display: block;
-	margin: 0px;
-	padding: 0px;
-	padding-left: 4px;
-	margin-left: 6px;
-	border-left: 1px solid #e0e0e0;
-}
-
-.section-2 {
-	display: block;
-	font-size: 16px;
-}
-
-.section-3 {
-	display: block;
-	margin-left: 6px;
-	padding-left: 6px;
-	border-left: 1px solid #e0e0e0;
-}
 
 /*==========================文章区=====================*/
 /* 正文区 */

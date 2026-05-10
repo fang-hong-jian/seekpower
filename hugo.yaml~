@@ -1,6 +1,6 @@
 baseURL: "https://www.seekpower.top/"
 locale: "zh-CN"
-defaultContentLanguage: "zh-cn"
+defaultContentLanguage: "zh-CN"
 title: "年轻人，你渴望力量吗？"
 theme: "textbook"
 

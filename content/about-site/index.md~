@@ -9,6 +9,7 @@ layout: single
 #about-site {
 		background-color: var(--active-bgcolor);
 		border-radius: 16px;
+        color:var(--active-fontcolor);
 	}
 </style>
 
